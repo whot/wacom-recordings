@@ -1,0 +1,455 @@
+# Pen node
+#
+# Recording is no interaction, just the regular update with the battery status.
+#
+# Wacom Co.,Ltd. Wacom Intuos Pro M
+# 0x05, 0x01,                    // Usage Page (Generic Desktop)        0
+# 0x09, 0x02,                    // Usage (Mouse)                       2
+# 0xa1, 0x01,                    // Collection (Application)            4
+# 0x85, 0x01,                    //  Report ID (1)                      6
+# 0x09, 0x01,                    //  Usage (Pointer)                    8
+# 0xa1, 0x00,                    //  Collection (Physical)              10
+# 0x05, 0x09,                    //   Usage Page (Button)               12
+# 0x19, 0x01,                    //   Usage Minimum (1)                 14
+# 0x29, 0x03,                    //   Usage Maximum (3)                 16
+# 0x15, 0x00,                    //   Logical Minimum (0)               18
+# 0x25, 0x01,                    //   Logical Maximum (1)               20
+# 0x75, 0x01,                    //   Report Size (1)                   22
+# 0x95, 0x03,                    //   Report Count (3)                  24
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              26
+# 0x75, 0x01,                    //   Report Size (1)                   28
+# 0x95, 0x05,                    //   Report Count (5)                  30
+# 0x81, 0x03,                    //   Input (Cnst,Var,Abs)              32
+# 0x05, 0x01,                    //   Usage Page (Generic Desktop)      34
+# 0x09, 0x30,                    //   Usage (X)                         36
+# 0x09, 0x31,                    //   Usage (Y)                         38
+# 0x15, 0x81,                    //   Logical Minimum (-127)            40
+# 0x25, 0x7f,                    //   Logical Maximum (127)             42
+# 0x75, 0x08,                    //   Report Size (8)                   44
+# 0x95, 0x02,                    //   Report Count (2)                  46
+# 0x81, 0x06,                    //   Input (Data,Var,Rel)              48
+# 0xc0,                          //  End Collection                     50
+# 0xc0,                          // End Collection                      51
+# 0x06, 0x0d, 0xff,              // Usage Page (Wacom)                  52
+# 0x09, 0x01,                    // Usage (Wacom Digitizer)             55
+# 0xa1, 0x01,                    // Collection (Application)            57
+# 0x85, 0x10,                    //  Report ID (16)                     59
+# 0x09, 0x20,                    //  Usage (Stylus)                     61
+# 0xa1, 0x00,                    //  Collection (Physical)              63
+# 0x09, 0x42,                    //   Usage (Tip Switch)                65
+# 0x09, 0x44,                    //   Usage (Barrel Switch)             67
+# 0x09, 0x5a,                    //   Usage (Secondary Barrel Switch)   69
+# 0x09, 0x45,                    //   Usage (Eraser)                    71
+# 0x09, 0x3c,                    //   Usage (Invert)                    73
+# 0x09, 0x32,                    //   Usage (In Range)                  75
+# 0x09, 0x36,                    //   Usage (Wacom Sense)               77
+# 0x15, 0x00,                    //   Logical Minimum (0)               79
+# 0x25, 0x01,                    //   Logical Maximum (1)               81
+# 0x75, 0x01,                    //   Report Size (1)                   83
+# 0x95, 0x07,                    //   Report Count (7)                  85
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              87
+# 0x95, 0x01,                    //   Report Count (1)                  89
+# 0x81, 0x03,                    //   Input (Cnst,Var,Abs)              91
+# 0x0a, 0x30, 0x01,              //   Usage (X)                         93
+# 0x65, 0x11,                    //   Unit (SILinear: cm)               96
+# 0x55, 0x0d,                    //   Unit Exponent (-3)                98
+# 0x35, 0x00,                    //   Physical Minimum (0)              100
+# 0x47, 0x80, 0x57, 0x00, 0x00,  //   Physical Maximum (22400)          102
+# 0x15, 0x00,                    //   Logical Minimum (0)               107
+# 0x27, 0x00, 0xaf, 0x00, 0x00,  //   Logical Maximum (44800)           109
+# 0x75, 0x18,                    //   Report Size (24)                  114
+# 0x95, 0x01,                    //   Report Count (1)                  116
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              118
+# 0x0a, 0x31, 0x01,              //   Usage (Y)                         120
+# 0x47, 0xd0, 0x39, 0x00, 0x00,  //   Physical Maximum (14800)          123
+# 0x27, 0xa0, 0x73, 0x00, 0x00,  //   Logical Maximum (29600)           128
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              133
+# 0x09, 0x30,                    //   Usage (Tip Pressure)              135
+# 0x55, 0x00,                    //   Unit Exponent (0)                 137
+# 0x65, 0x00,                    //   Unit (None)                       139
+# 0x15, 0x00,                    //   Logical Minimum (0)               141
+# 0x26, 0xff, 0x1f,              //   Logical Maximum (8191)            143
+# 0x75, 0x10,                    //   Report Size (16)                  146
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              148
+# 0x09, 0x3d,                    //   Usage (X Tilt)                    150
+# 0x09, 0x3e,                    //   Usage (Y Tilt)                    152
+# 0x65, 0x14,                    //   Unit (EnglishRotation: deg)       154
+# 0x55, 0x00,                    //   Unit Exponent (0)                 156
+# 0x35, 0xc0,                    //   Physical Minimum (-64)            158
+# 0x45, 0x3f,                    //   Physical Maximum (63)             160
+# 0x15, 0xc0,                    //   Logical Minimum (-64)             162
+# 0x25, 0x3f,                    //   Logical Maximum (63)              164
+# 0x75, 0x08,                    //   Report Size (8)                   166
+# 0x95, 0x02,                    //   Report Count (2)                  168
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              170
+# 0x09, 0x41,                    //   Usage (Twist)                     172
+# 0x65, 0x14,                    //   Unit (EnglishRotation: deg)       174
+# 0x55, 0x00,                    //   Unit Exponent (0)                 176
+# 0x36, 0x4c, 0xff,              //   Physical Minimum (-180)           178
+# 0x46, 0xb3, 0x00,              //   Physical Maximum (179)            181
+# 0x16, 0x7c, 0xfc,              //   Logical Minimum (-900)            184
+# 0x26, 0x83, 0x03,              //   Logical Maximum (899)             187
+# 0x75, 0x10,                    //   Report Size (16)                  190
+# 0x95, 0x01,                    //   Report Count (1)                  192
+# 0x81, 0x0a,                    //   Input (Data,Var,Abs,Wrap)         194
+# 0x0a, 0x03, 0x0d,              //   Usage (Wacom FingerWheel)         196
+# 0x65, 0x00,                    //   Unit (None)                       199
+# 0x55, 0x00,                    //   Unit Exponent (0)                 201
+# 0x15, 0x00,                    //   Logical Minimum (0)               203
+# 0x26, 0xff, 0x07,              //   Logical Maximum (2047)            205
+# 0x75, 0x10,                    //   Report Size (16)                  208
+# 0x95, 0x01,                    //   Report Count (1)                  210
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              212
+# 0x0a, 0x32, 0x01,              //   Usage (Wacom Distance)            214
+# 0x15, 0x00,                    //   Logical Minimum (0)               217
+# 0x25, 0x3f,                    //   Logical Maximum (63)              219
+# 0x75, 0x08,                    //   Report Size (8)                   221
+# 0x95, 0x01,                    //   Report Count (1)                  223
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              225
+# 0x09, 0x5b,                    //   Usage (Transducer Serial Number)  227
+# 0x09, 0x5c,                    //   Usage (Wacom SerialHi)            229
+# 0x17, 0x00, 0x00, 0x00, 0x80,  //   Logical Minimum (-2147483648)     231
+# 0x27, 0xff, 0xff, 0xff, 0x7f,  //   Logical Maximum (2147483647)      236
+# 0x75, 0x20,                    //   Report Size (32)                  241
+# 0x95, 0x02,                    //   Report Count (2)                  243
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              245
+# 0x09, 0x77,                    //   Usage (Wacom ToolType)            247
+# 0x15, 0x00,                    //   Logical Minimum (0)               249
+# 0x26, 0xff, 0x0f,              //   Logical Maximum (4095)            251
+# 0x75, 0x10,                    //   Report Size (16)                  254
+# 0x95, 0x01,                    //   Report Count (1)                  256
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              258
+# 0xc0,                          //  End Collection                     260
+# 0x85, 0x11,                    //  Report ID (17)                     261
+# 0x09, 0x39,                    //  Usage (Wacom DigitizerFnKeys)      263
+# 0xa1, 0x00,                    //  Collection (Physical)              265
+# 0x1a, 0x10, 0x09,              //   Usage Minimum (2320)              267
+# 0x2a, 0x17, 0x09,              //   Usage Maximum (2327)              270
+# 0x15, 0x00,                    //   Logical Minimum (0)               273
+# 0x25, 0x01,                    //   Logical Maximum (1)               275
+# 0x75, 0x01,                    //   Report Size (1)                   277
+# 0x95, 0x08,                    //   Report Count (8)                  279
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              281
+# 0x1a, 0x40, 0x09,              //   Usage Minimum (2368)              283
+# 0x2a, 0x47, 0x09,              //   Usage Maximum (2375)              286
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              289
+# 0x0a, 0x95, 0x09,              //   Usage (Wacom Button Center)       291
+# 0x95, 0x01,                    //   Report Count (1)                  294
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              296
+# 0x95, 0x07,                    //   Report Count (7)                  298
+# 0x81, 0x03,                    //   Input (Cnst,Var,Abs)              300
+# 0x0a, 0x38, 0x01,              //   Usage (Wacom TouchRing)           302
+# 0x65, 0x14,                    //   Unit (EnglishRotation: deg)       305
+# 0x55, 0x00,                    //   Unit Exponent (0)                 307
+# 0x35, 0x00,                    //   Physical Minimum (0)              309
+# 0x46, 0x67, 0x01,              //   Physical Maximum (359)            311
+# 0x15, 0x00,                    //   Logical Minimum (0)               314
+# 0x25, 0x47,                    //   Logical Maximum (71)              316
+# 0x75, 0x07,                    //   Report Size (7)                   318
+# 0x95, 0x01,                    //   Report Count (1)                  320
+# 0x81, 0x0a,                    //   Input (Data,Var,Abs,Wrap)         322
+# 0x0a, 0x39, 0x01,              //   Usage (Wacom TouchRingStatus)     324
+# 0x65, 0x00,                    //   Unit (None)                       327
+# 0x55, 0x00,                    //   Unit Exponent (0)                 329
+# 0x25, 0x01,                    //   Logical Maximum (1)               331
+# 0x75, 0x01,                    //   Report Size (1)                   333
+# 0x95, 0x01,                    //   Report Count (1)                  335
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              337
+# 0x75, 0x08,                    //   Report Size (8)                   339
+# 0x95, 0x04,                    //   Report Count (4)                  341
+# 0x81, 0x03,                    //   Input (Cnst,Var,Abs)              343
+# 0xc0,                          //  End Collection                     345
+# 0x85, 0x13,                    //  Report ID (19)                     346
+# 0x0a, 0x13, 0x10,              //  Usage (Wacom Digitizer Info)       348
+# 0xa1, 0x00,                    //  Collection (Physical)              351
+# 0x0a, 0x3b, 0x04,              //   Usage (Wacom Battery Level)       353
+# 0x15, 0x00,                    //   Logical Minimum (0)               356
+# 0x25, 0x64,                    //   Logical Maximum (100)             358
+# 0x75, 0x07,                    //   Report Size (7)                   360
+# 0x95, 0x01,                    //   Report Count (1)                  362
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              364
+# 0x0a, 0x04, 0x04,              //   Usage (Wacom Battery Charging)    366
+# 0x25, 0x01,                    //   Logical Maximum (1)               369
+# 0x75, 0x01,                    //   Report Size (1)                   371
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              373
+# 0x0a, 0x52, 0x04,              //   Usage (Vendor Usage 0x452)        375
+# 0x15, 0x00,                    //   Logical Minimum (0)               378
+# 0x25, 0x01,                    //   Logical Maximum (1)               380
+# 0x75, 0x01,                    //   Report Size (1)                   382
+# 0x95, 0x01,                    //   Report Count (1)                  384
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              386
+# 0x95, 0x06,                    //   Report Count (6)                  388
+# 0x81, 0x03,                    //   Input (Cnst,Var,Abs)              390
+# 0x0a, 0x54, 0x04,              //   Usage (Wacom TouchOnOff)          392
+# 0x95, 0x01,                    //   Report Count (1)                  395
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              397
+# 0x75, 0x08,                    //   Report Size (8)                   399
+# 0x95, 0x06,                    //   Report Count (6)                  401
+# 0x81, 0x03,                    //   Input (Cnst,Var,Abs)              403
+# 0xc0,                          //  End Collection                     405
+# 0x09, 0x0e,                    //  Usage (Device Configuration)       406
+# 0xa1, 0x02,                    //  Collection (Logical)               408
+# 0x15, 0x00,                    //   Logical Minimum (0)               410
+# 0x85, 0x02,                    //   Report ID (2)                     412
+# 0x09, 0x01,                    //   Usage (Wacom Digitizer)           414
+# 0x75, 0x08,                    //   Report Size (8)                   416
+# 0x25, 0x01,                    //   Logical Maximum (1)               418
+# 0x95, 0x01,                    //   Report Count (1)                  420
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            422
+# 0x85, 0x03,                    //   Report ID (3)                     424
+# 0x0a, 0x03, 0x10,              //   Usage (Vendor Usage 0x1003)       426
+# 0x26, 0xff, 0x00,              //   Logical Maximum (255)             429
+# 0x95, 0x01,                    //   Report Count (1)                  432
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            434
+# 0x85, 0x04,                    //   Report ID (4)                     436
+# 0x0a, 0x04, 0x10,              //   Usage (Vendor Usage 0x1004)       438
+# 0x25, 0x01,                    //   Logical Maximum (1)               441
+# 0x95, 0x01,                    //   Report Count (1)                  443
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            445
+# 0x85, 0x07,                    //   Report ID (7)                     447
+# 0x0a, 0x09, 0x10,              //   Usage (Vendor Usage 0x1009)       449
+# 0x25, 0x02,                    //   Logical Maximum (2)               452
+# 0x95, 0x01,                    //   Report Count (1)                  454
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            456
+# 0x95, 0x01,                    //   Report Count (1)                  458
+# 0xb1, 0x03,                    //   Feature (Cnst,Var,Abs)            460
+# 0x0a, 0x07, 0x10,              //   Usage (Vendor Usage 0x1007)       462
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         465
+# 0x0a, 0x08, 0x10,              //   Usage (Vendor Usage 0x1008)       467
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         470
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         472
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         474
+# 0x27, 0xff, 0xff, 0x00, 0x00,  //   Logical Maximum (65535)           476
+# 0x75, 0x10,                    //   Report Size (16)                  481
+# 0x95, 0x06,                    //   Report Count (6)                  483
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            485
+# 0x75, 0x08,                    //   Report Size (8)                   487
+# 0x95, 0x01,                    //   Report Count (1)                  489
+# 0xb1, 0x03,                    //   Feature (Cnst,Var,Abs)            491
+# 0x85, 0x0c,                    //   Report ID (12)                    493
+# 0x0a, 0x30, 0x0d,              //   Usage (Wacom Offset Left)         495
+# 0x0a, 0x31, 0x0d,              //   Usage (Wacom Offset Top)          498
+# 0x0a, 0x32, 0x0d,              //   Usage (Wacom Offset Right)        501
+# 0x0a, 0x33, 0x0d,              //   Usage (Wacom Offset Bottom)       504
+# 0x65, 0x11,                    //   Unit (SILinear: cm)               507
+# 0x55, 0x0d,                    //   Unit Exponent (-3)                509
+# 0x75, 0x10,                    //   Report Size (16)                  511
+# 0x95, 0x04,                    //   Report Count (4)                  513
+# 0xb1, 0x03,                    //   Feature (Cnst,Var,Abs)            515
+# 0x85, 0x0d,                    //   Report ID (13)                    517
+# 0x65, 0x00,                    //   Unit (None)                       519
+# 0x55, 0x00,                    //   Unit Exponent (0)                 521
+# 0x0a, 0x0d, 0x10,              //   Usage (Vendor Usage 0x100d)       523
+# 0x15, 0x00,                    //   Logical Minimum (0)               526
+# 0x25, 0x01,                    //   Logical Maximum (1)               528
+# 0x75, 0x08,                    //   Report Size (8)                   530
+# 0x95, 0x01,                    //   Report Count (1)                  532
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            534
+# 0x85, 0x14,                    //   Report ID (20)                    536
+# 0x0a, 0x14, 0x10,              //   Usage (Vendor Usage 0x1014)       538
+# 0x26, 0xff, 0x00,              //   Logical Maximum (255)             541
+# 0x95, 0x0d,                    //   Report Count (13)                 544
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            546
+# 0x85, 0x31,                    //   Report ID (49)                    548
+# 0x0a, 0x31, 0x10,              //   Usage (Vendor Usage 0x1031)       550
+# 0x25, 0x64,                    //   Logical Maximum (100)             553
+# 0x95, 0x05,                    //   Report Count (5)                  555
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            557
+# 0x85, 0x32,                    //   Report ID (50)                    559
+# 0x0a, 0x31, 0x10,              //   Usage (Vendor Usage 0x1031)       561
+# 0x25, 0x64,                    //   Logical Maximum (100)             564
+# 0x95, 0x01,                    //   Report Count (1)                  566
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            568
+# 0x0a, 0x32, 0x10,              //   Usage (Vendor Usage 0x1032)       570
+# 0x25, 0x03,                    //   Logical Maximum (3)               573
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            575
+# 0x85, 0x34,                    //   Report ID (52)                    577
+# 0x0a, 0x34, 0x10,              //   Usage (Vendor Usage 0x1034)       579
+# 0x25, 0x01,                    //   Logical Maximum (1)               582
+# 0x95, 0x04,                    //   Report Count (4)                  584
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            586
+# 0x85, 0x35,                    //   Report ID (53)                    588
+# 0x0a, 0x35, 0x10,              //   Usage (Vendor Usage 0x1035)       590
+# 0x26, 0xff, 0x00,              //   Logical Maximum (255)             593
+# 0x95, 0x0a,                    //   Report Count (10)                 596
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            598
+# 0x85, 0x36,                    //   Report ID (54)                    600
+# 0x0a, 0x35, 0x10,              //   Usage (Vendor Usage 0x1035)       602
+# 0x26, 0xff, 0x00,              //   Logical Maximum (255)             605
+# 0x96, 0x01, 0x01,              //   Report Count (257)                608
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            611
+# 0x85, 0xcc,                    //   Report ID (204)                   613
+# 0x0a, 0xcc, 0x10,              //   Usage (Vendor Usage 0x10cc)       615
+# 0x26, 0xff, 0x00,              //   Logical Maximum (255)             618
+# 0x95, 0x02,                    //   Report Count (2)                  621
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            623
+# 0xc0,                          //  End Collection                     625
+# 0x0a, 0xac, 0x10,              //  Usage (Vendor Usage 0x10ac)        626
+# 0xa1, 0x02,                    //  Collection (Logical)               629
+# 0x15, 0x00,                    //   Logical Minimum (0)               631
+# 0x26, 0xff, 0x00,              //   Logical Maximum (255)             633
+# 0x75, 0x08,                    //   Report Size (8)                   636
+# 0x85, 0xac,                    //   Report ID (172)                   638
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         640
+# 0x95, 0xbf,                    //   Report Count (191)                642
+# 0x81, 0x02,                    //   Input (Data,Var,Abs)              644
+# 0x85, 0x33,                    //   Report ID (51)                    646
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         648
+# 0x95, 0x12,                    //   Report Count (18)                 650
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            652
+# 0x85, 0x64,                    //   Report ID (100)                   654
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         656
+# 0x95, 0x0c,                    //   Report Count (12)                 658
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            660
+# 0x85, 0x15,                    //   Report ID (21)                    662
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         664
+# 0x95, 0x0e,                    //   Report Count (14)                 666
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            668
+# 0x85, 0x12,                    //   Report ID (18)                    670
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         672
+# 0x95, 0x04,                    //   Report Count (4)                  674
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            676
+# 0x85, 0x16,                    //   Report ID (22)                    678
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         680
+# 0x95, 0x0e,                    //   Report Count (14)                 682
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            684
+# 0x85, 0x40,                    //   Report ID (64)                    686
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         688
+# 0x95, 0x01,                    //   Report Count (1)                  690
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            692
+# 0x85, 0x41,                    //   Report ID (65)                    694
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         696
+# 0x95, 0x01,                    //   Report Count (1)                  698
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            700
+# 0x85, 0x42,                    //   Report ID (66)                    702
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         704
+# 0x95, 0x04,                    //   Report Count (4)                  706
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            708
+# 0x85, 0x43,                    //   Report ID (67)                    710
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         712
+# 0x95, 0x0d,                    //   Report Count (13)                 714
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            716
+# 0x85, 0x44,                    //   Report ID (68)                    718
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         720
+# 0x95, 0x3f,                    //   Report Count (63)                 722
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            724
+# 0x85, 0x45,                    //   Report ID (69)                    726
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         728
+# 0x95, 0x20,                    //   Report Count (32)                 730
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            732
+# 0x85, 0x60,                    //   Report ID (96)                    734
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         736
+# 0x95, 0x3f,                    //   Report Count (63)                 738
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            740
+# 0x85, 0x61,                    //   Report ID (97)                    742
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         744
+# 0x95, 0x3e,                    //   Report Count (62)                 746
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            748
+# 0x85, 0x62,                    //   Report ID (98)                    750
+# 0x09, 0x00,                    //   Usage (Vendor Usage 0x00)         752
+# 0x95, 0x3e,                    //   Report Count (62)                 754
+# 0xb1, 0x02,                    //   Feature (Data,Var,Abs)            756
+# 0xc0,                          //  End Collection                     758
+# 0x85, 0xd0,                    //  Report ID (208)                    759
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            761
+# 0x96, 0x08, 0x00,              //  Report Count (8)                   763
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             766
+# 0x85, 0xd1,                    //  Report ID (209)                    768
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            770
+# 0x96, 0x04, 0x01,              //  Report Count (260)                 772
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             775
+# 0x85, 0xd2,                    //  Report ID (210)                    777
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            779
+# 0x96, 0x04, 0x01,              //  Report Count (260)                 781
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             784
+# 0x85, 0xd3,                    //  Report ID (211)                    786
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            788
+# 0x96, 0x04, 0x00,              //  Report Count (4)                   790
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             793
+# 0x85, 0xd4,                    //  Report ID (212)                    795
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            797
+# 0x96, 0x04, 0x00,              //  Report Count (4)                   799
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             802
+# 0x85, 0xd5,                    //  Report ID (213)                    804
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            806
+# 0x96, 0x04, 0x00,              //  Report Count (4)                   808
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             811
+# 0x85, 0xd6,                    //  Report ID (214)                    813
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            815
+# 0x96, 0x04, 0x00,              //  Report Count (4)                   817
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             820
+# 0x85, 0xd7,                    //  Report ID (215)                    822
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            824
+# 0x96, 0x08, 0x00,              //  Report Count (8)                   826
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             829
+# 0x85, 0xd8,                    //  Report ID (216)                    831
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            833
+# 0x96, 0x0c, 0x00,              //  Report Count (12)                  835
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             838
+# 0x85, 0xd9,                    //  Report ID (217)                    840
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            842
+# 0x96, 0x00, 0x0a,              //  Report Count (2560)                844
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             847
+# 0x85, 0xda,                    //  Report ID (218)                    849
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            851
+# 0x96, 0x04, 0x04,              //  Report Count (1028)                853
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             856
+# 0x85, 0xdb,                    //  Report ID (219)                    858
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            860
+# 0x96, 0x06, 0x00,              //  Report Count (6)                   862
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             865
+# 0x85, 0xdc,                    //  Report ID (220)                    867
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            869
+# 0x96, 0x02, 0x00,              //  Report Count (2)                   871
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             874
+# 0x85, 0xdd,                    //  Report ID (221)                    876
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            878
+# 0x96, 0x04, 0x00,              //  Report Count (4)                   880
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             883
+# 0x85, 0xde,                    //  Report ID (222)                    885
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            887
+# 0x96, 0x04, 0x00,              //  Report Count (4)                   889
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             892
+# 0x85, 0xdf,                    //  Report ID (223)                    894
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            896
+# 0x96, 0x22, 0x00,              //  Report Count (34)                  898
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             901
+# 0x85, 0xe0,                    //  Report ID (224)                    903
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            905
+# 0x96, 0x01, 0x00,              //  Report Count (1)                   907
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             910
+# 0x85, 0xe1,                    //  Report ID (225)                    912
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            914
+# 0x96, 0x02, 0x00,              //  Report Count (2)                   916
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             919
+# 0x85, 0xe2,                    //  Report ID (226)                    921
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            923
+# 0x96, 0x02, 0x00,              //  Report Count (2)                   925
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             928
+# 0x85, 0xe3,                    //  Report ID (227)                    930
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            932
+# 0x96, 0x02, 0x00,              //  Report Count (2)                   934
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             937
+# 0x85, 0xe4,                    //  Report ID (228)                    939
+# 0x09, 0x01,                    //  Usage (Wacom Digitizer)            941
+# 0x96, 0xff, 0x01,              //  Report Count (511)                 943
+# 0xb1, 0x02,                    //  Feature (Data,Var,Abs)             946
+# 0xc0,                          // End Collection                      948
+# 
+R: 949 05 01 09 02 a1 01 85 01 09 01 a1 00 05 09 19 01 29 03 15 00 25 01 75 01 95 03 81 02 75 01 95 05 81 03 05 01 09 30 09 31 15 81 25 7f 75 08 95 02 81 06 c0 c0 06 0d ff 09 01 a1 01 85 10 09 20 a1 00 09 42 09 44 09 5a 09 45 09 3c 09 32 09 36 15 00 25 01 75 01 95 07 81 02 95 01 81 03 0a 30 01 65 11 55 0d 35 00 47 80 57 00 00 15 00 27 00 af 00 00 75 18 95 01 81 02 0a 31 01 47 d0 39 00 00 27 a0 73 00 00 81 02 09 30 55 00 65 00 15 00 26 ff 1f 75 10 81 02 09 3d 09 3e 65 14 55 00 35 c0 45 3f 15 c0 25 3f 75 08 95 02 81 02 09 41 65 14 55 00 36 4c ff 46 b3 00 16 7c fc 26 83 03 75 10 95 01 81 0a 0a 03 0d 65 00 55 00 15 00 26 ff 07 75 10 95 01 81 02 0a 32 01 15 00 25 3f 75 08 95 01 81 02 09 5b 09 5c 17 00 00 00 80 27 ff ff ff 7f 75 20 95 02 81 02 09 77 15 00 26 ff 0f 75 10 95 01 81 02 c0 85 11 09 39 a1 00 1a 10 09 2a 17 09 15 00 25 01 75 01 95 08 81 02 1a 40 09 2a 47 09 81 02 0a 95 09 95 01 81 02 95 07 81 03 0a 38 01 65 14 55 00 35 00 46 67 01 15 00 25 47 75 07 95 01 81 0a 0a 39 01 65 00 55 00 25 01 75 01 95 01 81 02 75 08 95 04 81 03 c0 85 13 0a 13 10 a1 00 0a 3b 04 15 00 25 64 75 07 95 01 81 02 0a 04 04 25 01 75 01 81 02 0a 52 04 15 00 25 01 75 01 95 01 81 02 95 06 81 03 0a 54 04 95 01 81 02 75 08 95 06 81 03 c0 09 0e a1 02 15 00 85 02 09 01 75 08 25 01 95 01 b1 02 85 03 0a 03 10 26 ff 00 95 01 b1 02 85 04 0a 04 10 25 01 95 01 b1 02 85 07 0a 09 10 25 02 95 01 b1 02 95 01 b1 03 0a 07 10 09 00 0a 08 10 09 00 09 00 09 00 27 ff ff 00 00 75 10 95 06 b1 02 75 08 95 01 b1 03 85 0c 0a 30 0d 0a 31 0d 0a 32 0d 0a 33 0d 65 11 55 0d 75 10 95 04 b1 03 85 0d 65 00 55 00 0a 0d 10 15 00 25 01 75 08 95 01 b1 02 85 14 0a 14 10 26 ff 00 95 0d b1 02 85 31 0a 31 10 25 64 95 05 b1 02 85 32 0a 31 10 25 64 95 01 b1 02 0a 32 10 25 03 b1 02 85 34 0a 34 10 25 01 95 04 b1 02 85 35 0a 35 10 26 ff 00 95 0a b1 02 85 36 0a 35 10 26 ff 00 96 01 01 b1 02 85 cc 0a cc 10 26 ff 00 95 02 b1 02 c0 0a ac 10 a1 02 15 00 26 ff 00 75 08 85 ac 09 00 95 bf 81 02 85 33 09 00 95 12 b1 02 85 64 09 00 95 0c b1 02 85 15 09 00 95 0e b1 02 85 12 09 00 95 04 b1 02 85 16 09 00 95 0e b1 02 85 40 09 00 95 01 b1 02 85 41 09 00 95 01 b1 02 85 42 09 00 95 04 b1 02 85 43 09 00 95 0d b1 02 85 44 09 00 95 3f b1 02 85 45 09 00 95 20 b1 02 85 60 09 00 95 3f b1 02 85 61 09 00 95 3e b1 02 85 62 09 00 95 3e b1 02 c0 85 d0 09 01 96 08 00 b1 02 85 d1 09 01 96 04 01 b1 02 85 d2 09 01 96 04 01 b1 02 85 d3 09 01 96 04 00 b1 02 85 d4 09 01 96 04 00 b1 02 85 d5 09 01 96 04 00 b1 02 85 d6 09 01 96 04 00 b1 02 85 d7 09 01 96 08 00 b1 02 85 d8 09 01 96 0c 00 b1 02 85 d9 09 01 96 00 0a b1 02 85 da 09 01 96 04 04 b1 02 85 db 09 01 96 06 00 b1 02 85 dc 09 01 96 02 00 b1 02 85 dd 09 01 96 04 00 b1 02 85 de 09 01 96 04 00 b1 02 85 df 09 01 96 22 00 b1 02 85 e0 09 01 96 01 00 b1 02 85 e1 09 01 96 02 00 b1 02 85 e2 09 01 96 02 00 b1 02 85 e3 09 01 96 02 00 b1 02 85 e4 09 01 96 ff 01 b1 02 c0
+N: Wacom Co.,Ltd. Wacom Intuos Pro M
+I: 3 056a 0357
+# ReportID: 19 / Wacom Battery Level:  100 | Wacom Battery Charging: 0 | 0xff0d0452: 0 | # | Wacom TouchOnOff: 1 | # 
+E: 000000.000000 9 13 64 80 00 00 00 00 00 00
+# ReportID: 19 / Wacom Battery Level:  100 | Wacom Battery Charging: 0 | 0xff0d0452: 0 | # | Wacom TouchOnOff: 1 | # 
+E: 000002.000019 9 13 64 80 00 00 00 00 00 00
+# ReportID: 19 / Wacom Battery Level:  100 | Wacom Battery Charging: 0 | 0xff0d0452: 0 | # | Wacom TouchOnOff: 1 | # 
+E: 000003.999989 9 13 64 80 00 00 00 00 00 00
+# ReportID: 19 / Wacom Battery Level:  100 | Wacom Battery Charging: 0 | 0xff0d0452: 0 | # | Wacom TouchOnOff: 1 | # 
+E: 000005.999976 9 13 64 80 00 00 00 00 00 00
+# ReportID: 19 / Wacom Battery Level:  100 | Wacom Battery Charging: 0 | 0xff0d0452: 0 | # | Wacom TouchOnOff: 1 | # 
+E: 000007.999902 9 13 64 80 00 00 00 00 00 00
+# ReportID: 19 / Wacom Battery Level:  100 | Wacom Battery Charging: 0 | 0xff0d0452: 0 | # | Wacom TouchOnOff: 1 | # 
+E: 000010.000145 9 13 64 80 00 00 00 00 00 00
+# ReportID: 19 / Wacom Battery Level:  100 | Wacom Battery Charging: 0 | 0xff0d0452: 0 | # | Wacom TouchOnOff: 1 | # 
+E: 000012.000004 9 13 64 80 00 00 00 00 00 00
