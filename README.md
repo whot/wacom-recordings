@@ -2,7 +2,7 @@ Wacom Recordings
 ================
 
 This repository contains recordings of interactions with tablet devices. With
-the [hid-replay tool](https://gitlab.freedesktop.org/libevdev/hid-tools) you
+the [hid-replay tool](https://github.com/hidutils/hid-replay) you
 can re-create a tablet device at the kernel level and trick the rest of
 the stack into having a tablet device connected.
 
@@ -21,19 +21,19 @@ Creating/replaying devices
 ==========================
 
 Note that `hid-replay` needs to create a UHID kernel device via `/dev/uhid` and thus
-needs to be run as root. It can be run from the git repository:
+needs to be run as root. It can be installed with `cargo`:
 
 ```
-$ git clone https://gitlab.freedesktop.org/libevdev/hid-tools
-$ cd hid-tools
-$ sudo ./hid-replay <recording>
+$ sudo CARGO_INSTALL_ROOT=/usr/local cargo install hid-replay
+$ sudo hid-replay path/to/recording
 ```
 
-Alternatively you can pip install it (as root)
-
+Alternatively you can download a pre-built binary from the 
+[hid-replay releases](https://github.com/hidutils/hid-replay/releases).
 ```
-$ sudo pip install https://gitlab.freedesktop.org/libevdev/hid-tools
-$ sudo hid-replay <recording>
+$ unzip hid-replay.zip
+$ chmod +x hid-replay
+$ sudo ./hid-replay
 ```
 
 License
