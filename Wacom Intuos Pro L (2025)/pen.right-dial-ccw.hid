@@ -1,0 +1,1086 @@
+# Three clicks of the right dial in CCW direction
+#
+# Wacom Co.,Ltd. Wacom Intuos Pro L
+# Report descriptor length: 1324 bytes
+#   Bytes                          // Field Name                              Offset
+# ----------------------------------------------------------------------------------
+# 🮥 0x05, 0x01,                    // Usage Page (Generic Desktop)              0
+# 🭬 0x09, 0x80,                    // Usage (System Control)                    2
+#   0xa1, 0x01,                    // Collection (Application)                  4
+# ┅ 0x85, 0xfe,                    //   Report ID (254)                         6
+#   0xa1, 0x00,                    //   Collection (Physical)                   8
+# 🭬 0x09, 0x82,                    //     Usage (System Sleep)                  10
+# 🭬 0x09, 0x83,                    //     Usage (System Wake Up)                12
+#   0x15, 0x00,                    //     Logical Minimum (0)                   14
+#   0x25, 0x01,                    //     Logical Maximum (1)                   16
+#   0x75, 0x01,                    //     Report Size (1)                       18
+#   0x95, 0x02,                    //     Report Count (2)                      20
+# ┇ 0x81, 0x06,                    //     Input (Data,Var,Rel)                  22
+#   0x95, 0x06,                    //     Report Count (6)                      24
+# ┇ 0x81, 0x03,                    //     Input (Cnst,Var,Abs)                  26
+#   0xc0,                          //   End Collection                          28
+#   0xc0,                          // End Collection                            29
+# 🮥 0x05, 0x0d,                    // Usage Page (Digitizers)                   30
+# 🭬 0x09, 0x01,                    // Usage (Digitizer)                         32
+#   0xa1, 0x01,                    // Collection (Application)                  34
+# ┅ 0x85, 0x06,                    //   Report ID (6)                           36
+# 🭬 0x09, 0x20,                    //   Usage (Stylus)                          38
+#   0x35, 0x00,                    //   Physical Minimum (0)                    40
+#   0x45, 0x00,                    //   Physical Maximum (0)                    42
+#   0x15, 0x00,                    //   Logical Minimum (0)                     44
+#   0x25, 0x01,                    //   Logical Maximum (1)                     46
+#   0xa1, 0x00,                    //   Collection (Physical)                   48
+# 🭬 0x09, 0x54,                    //     Usage (Contact Count)                 50
+#   0x25, 0x01,                    //     Logical Maximum (1)                   52
+#   0x75, 0x08,                    //     Report Size (8)                       54
+#   0x95, 0x01,                    //     Report Count (1)                      56
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  58
+# 🭬 0x09, 0x42,                    //     Usage (Tip Switch)                    60
+# 🭬 0x09, 0x44,                    //     Usage (Barrel Switch)                 62
+# 🭬 0x09, 0x5a,                    //     Usage (Secondary Barrel Switch)       64
+# 🮥 0x06, 0x0d, 0xff,              //     Usage Page (Wacom)                    66
+# 🭬 0x09, 0x5d,                    //     Usage (Preferred Color is Locked)     69
+# 🮥 0x05, 0x0d,                    //     Usage Page (Digitizers)               71
+# 🭬 0x09, 0x45,                    //     Usage (Eraser)                        73
+# 🭬 0x09, 0x3c,                    //     Usage (Invert)                        75
+# 🭬 0x09, 0x32,                    //     Usage (In Range)                      77
+#   0x75, 0x01,                    //     Report Size (1)                       79
+#   0x95, 0x07,                    //     Report Count (7)                      81
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  83
+#   0x95, 0x01,                    //     Report Count (1)                      85
+# ┇ 0x81, 0x03,                    //     Input (Cnst,Var,Abs)                  87
+# 🮥 0x05, 0x01,                    //     Usage Page (Generic Desktop)          89
+# 🭬 0x09, 0x30,                    //     Usage (X)                             91
+#   0x65, 0x11,                    //     Unit (SILinear: cm)                   93
+#   0x55, 0x0d,                    //     Unit Exponent (-3)                    95
+#   0x47, 0x54, 0x88, 0x00, 0x00,  //     Physical Maximum (34900)              97
+#   0x27, 0xff, 0x7f, 0x00, 0x00,  //     Logical Maximum (32767)               102
+#   0x75, 0x10,                    //     Report Size (16)                      107
+#   0x95, 0x01,                    //     Report Count (1)                      109
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  111
+# 🭬 0x09, 0x31,                    //     Usage (Y)                             113
+#   0x47, 0x2c, 0x4c, 0x00, 0x00,  //     Physical Maximum (19500)              115
+#   0x27, 0xff, 0x7f, 0x00, 0x00,  //     Logical Maximum (32767)               120
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  125
+# 🮥 0x05, 0x0d,                    //     Usage Page (Digitizers)               127
+# 🭬 0x09, 0x30,                    //     Usage (Tip Pressure)                  129
+#   0x65, 0x00,                    //     Unit (None)                           131
+#   0x55, 0x00,                    //     Unit Exponent (0)                     133
+#   0x45, 0x00,                    //     Physical Maximum (0)                  135
+#   0x26, 0xff, 0x0f,              //     Logical Maximum (4095)                137
+#   0x75, 0x10,                    //     Report Size (16)                      140
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  142
+# 🭬 0x09, 0x3d,                    //     Usage (X Tilt)                        144
+# 🭬 0x09, 0x3e,                    //     Usage (Y Tilt)                        146
+#   0x65, 0x14,                    //     Unit (EnglishRotation: deg)           148
+#   0x55, 0x0e,                    //     Unit Exponent (-2)                    150
+#   0x36, 0xd8, 0xdc,              //     Physical Minimum (56536)              152
+#   0x46, 0x28, 0x23,              //     Physical Maximum (9000)               155
+#   0x16, 0xd8, 0xdc,              //     Logical Minimum (56536)               158
+#   0x26, 0x28, 0x23,              //     Logical Maximum (9000)                161
+#   0x75, 0x10,                    //     Report Size (16)                      164
+#   0x95, 0x02,                    //     Report Count (2)                      166
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  168
+# 🮥 0x06, 0x0d, 0xff,              //     Usage Page (Wacom)                    170
+#   0x65, 0x00,                    //     Unit (None)                           173
+#   0x55, 0x00,                    //     Unit Exponent (0)                     175
+# 🭬 0x0a, 0x32, 0x01,              //     Usage (Wacom Distance)                177
+#   0x35, 0x00,                    //     Physical Minimum (0)                  180
+#   0x45, 0x00,                    //     Physical Maximum (0)                  182
+#   0x15, 0x00,                    //     Logical Minimum (0)                   184
+#   0x26, 0xff, 0x00,              //     Logical Maximum (255)                 186
+#   0x75, 0x08,                    //     Report Size (8)                       189
+#   0x95, 0x01,                    //     Report Count (1)                      191
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  193
+# 🮥 0x05, 0x0d,                    //     Usage Page (Digitizers)               195
+# 🭬 0x09, 0x56,                    //     Usage (Scan Time)                     197
+#   0x15, 0x00,                    //     Logical Minimum (0)                   199
+#   0x27, 0xff, 0xff, 0x00, 0x00,  //     Logical Maximum (65535)               201
+#   0x75, 0x10,                    //     Report Size (16)                      206
+#   0x95, 0x01,                    //     Report Count (1)                      208
+# ┇ 0x81, 0x0a,                    //     Input (Data,Var,Abs,,Wrap)            210
+# 🮥 0x06, 0x0d, 0xff,              //     Usage Page (Wacom)                    212
+# 🭬 0x0a, 0x20, 0x02,              //     Usage (0x0220)                        215
+#   0x15, 0x00,                    //     Logical Minimum (0)                   218
+#   0x27, 0xff, 0xff, 0x00, 0x00,  //     Logical Maximum (65535)               220
+#   0x75, 0x10,                    //     Report Size (16)                      225
+#   0x95, 0x01,                    //     Report Count (1)                      227
+# ┇ 0x81, 0x0a,                    //     Input (Data,Var,Abs,,Wrap)            229
+#   0xc0,                          //   End Collection                          231
+#   0xc0,                          // End Collection                            232
+# 🮥 0x06, 0x0d, 0xff,              // Usage Page (Wacom)                        233
+# 🭬 0x09, 0x01,                    // Usage (Wacom Digitizer)                   236
+#   0xa1, 0x01,                    // Collection (Application)                  238
+# ┅ 0x85, 0x1e,                    //   Report ID (30)                          240
+# 🭬 0x09, 0x20,                    //   Usage (Stylus)                          242
+#   0x35, 0x00,                    //   Physical Minimum (0)                    244
+#   0x45, 0x00,                    //   Physical Maximum (0)                    246
+#   0x15, 0x00,                    //   Logical Minimum (0)                     248
+#   0x25, 0x01,                    //   Logical Maximum (1)                     250
+#   0xa1, 0x00,                    //   Collection (Physical)                   252
+# 🭬 0x09, 0x54,                    //     Usage (Contact Count)                 254
+#   0x25, 0x01,                    //     Logical Maximum (1)                   256
+#   0x75, 0x08,                    //     Report Size (8)                       258
+#   0x95, 0x01,                    //     Report Count (1)                      260
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  262
+# 🭬 0x09, 0x42,                    //     Usage (Tip Switch)                    264
+# 🭬 0x09, 0x44,                    //     Usage (Barrel Switch)                 266
+# 🭬 0x09, 0x5a,                    //     Usage (Secondary Barrel Switch)       268
+# 🭬 0x09, 0x5d,                    //     Usage (Preferred Color is Locked)     270
+# 🭬 0x09, 0x45,                    //     Usage (Eraser)                        272
+# 🭬 0x09, 0x3c,                    //     Usage (Invert)                        274
+# 🭬 0x09, 0x32,                    //     Usage (In Range)                      276
+# 🭬 0x09, 0x36,                    //     Usage (Wacom Sense)                   278
+#   0x25, 0x01,                    //     Logical Maximum (1)                   280
+#   0x75, 0x01,                    //     Report Size (1)                       282
+#   0x95, 0x08,                    //     Report Count (8)                      284
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  286
+# 🭬 0x0a, 0x30, 0x01,              //     Usage (X)                             288
+#   0x65, 0x11,                    //     Unit (SILinear: cm)                   291
+#   0x55, 0x0d,                    //     Unit Exponent (-3)                    293
+#   0x47, 0x54, 0x88, 0x00, 0x00,  //     Physical Maximum (34900)              295
+#   0x27, 0xa8, 0x10, 0x01, 0x00,  //     Logical Maximum (69800)               300
+#   0x75, 0x18,                    //     Report Size (24)                      305
+#   0x95, 0x01,                    //     Report Count (1)                      307
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  309
+# 🭬 0x0a, 0x31, 0x01,              //     Usage (Y)                             311
+#   0x47, 0x2c, 0x4c, 0x00, 0x00,  //     Physical Maximum (19500)              314
+#   0x27, 0x58, 0x98, 0x00, 0x00,  //     Logical Maximum (39000)               319
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  324
+# 🭬 0x09, 0x30,                    //     Usage (Tip Pressure)                  326
+#   0x55, 0x00,                    //     Unit Exponent (0)                     328
+#   0x65, 0x00,                    //     Unit (None)                           330
+#   0x45, 0x00,                    //     Physical Maximum (0)                  332
+#   0x15, 0x00,                    //     Logical Minimum (0)                   334
+#   0x26, 0xff, 0x1f,              //     Logical Maximum (8191)                336
+#   0x75, 0x10,                    //     Report Size (16)                      339
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  341
+# 🭬 0x09, 0x3d,                    //     Usage (X Tilt)                        343
+# 🭬 0x09, 0x3e,                    //     Usage (Y Tilt)                        345
+#   0x65, 0x14,                    //     Unit (EnglishRotation: deg)           347
+#   0x55, 0x00,                    //     Unit Exponent (0)                     349
+#   0x35, 0xa6,                    //     Physical Minimum (166)                351
+#   0x45, 0x5a,                    //     Physical Maximum (90)                 353
+#   0x15, 0xa6,                    //     Logical Minimum (166)                 355
+#   0x25, 0x5a,                    //     Logical Maximum (90)                  357
+#   0x75, 0x10,                    //     Report Size (16)                      359
+#   0x95, 0x02,                    //     Report Count (2)                      361
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  363
+# 🭬 0x09, 0x41,                    //     Usage (Twist)                         365
+#   0x65, 0x14,                    //     Unit (EnglishRotation: deg)           367
+#   0x55, 0x00,                    //     Unit Exponent (0)                     369
+#   0x36, 0x4c, 0xff,              //     Physical Minimum (65356)              371
+#   0x46, 0xb3, 0x00,              //     Physical Maximum (179)                374
+#   0x16, 0x7c, 0xfc,              //     Logical Minimum (64636)               377
+#   0x26, 0x83, 0x03,              //     Logical Maximum (899)                 380
+#   0x75, 0x10,                    //     Report Size (16)                      383
+#   0x95, 0x01,                    //     Report Count (1)                      385
+# ┇ 0x81, 0x0a,                    //     Input (Data,Var,Abs,,Wrap)            387
+# 🭬 0x0a, 0x03, 0x0d,              //     Usage (Wacom FingerWheel)             389
+#   0x65, 0x00,                    //     Unit (None)                           392
+#   0x55, 0x00,                    //     Unit Exponent (0)                     394
+#   0x35, 0x00,                    //     Physical Minimum (0)                  396
+#   0x45, 0x00,                    //     Physical Maximum (0)                  398
+#   0x15, 0x00,                    //     Logical Minimum (0)                   400
+#   0x26, 0xff, 0x07,              //     Logical Maximum (2047)                402
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  405
+# 🭬 0x0a, 0x32, 0x01,              //     Usage (Wacom Distance)                407
+#   0x35, 0x00,                    //     Physical Minimum (0)                  410
+#   0x45, 0x00,                    //     Physical Maximum (0)                  412
+#   0x15, 0x00,                    //     Logical Minimum (0)                   414
+#   0x26, 0xff, 0x00,              //     Logical Maximum (255)                 416
+#   0x75, 0x08,                    //     Report Size (8)                       419
+#   0x95, 0x01,                    //     Report Count (1)                      421
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  423
+# 🭬 0x09, 0x5b,                    //     Usage (Transducer Serial Number)      425
+# 🭬 0x09, 0x5c,                    //     Usage (Wacom SerialHi)                427
+#   0x17, 0x00, 0x00, 0x00, 0x80,  //     Logical Minimum (-2147483648)         429
+#   0x27, 0xff, 0xff, 0xff, 0x7f,  //     Logical Maximum (2147483647)          434
+#   0x75, 0x20,                    //     Report Size (32)                      439
+#   0x95, 0x02,                    //     Report Count (2)                      441
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  443
+# 🭬 0x09, 0x77,                    //     Usage (Wacom ToolType)                445
+#   0x15, 0x00,                    //     Logical Minimum (0)                   447
+#   0x26, 0xff, 0x0f,              //     Logical Maximum (4095)                449
+#   0x75, 0x10,                    //     Report Size (16)                      452
+#   0x95, 0x01,                    //     Report Count (1)                      454
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  456
+# 🭬 0x09, 0x56,                    //     Usage (Scan Time)                     458
+#   0x15, 0x00,                    //     Logical Minimum (0)                   460
+#   0x27, 0xff, 0xff, 0x00, 0x00,  //     Logical Maximum (65535)               462
+#   0x75, 0x10,                    //     Report Size (16)                      467
+#   0x95, 0x01,                    //     Report Count (1)                      469
+# ┇ 0x81, 0x0a,                    //     Input (Data,Var,Abs,,Wrap)            471
+# 🭬 0x0a, 0x20, 0x02,              //     Usage (0x0220)                        473
+#   0x15, 0x00,                    //     Logical Minimum (0)                   476
+#   0x27, 0xff, 0xff, 0x00, 0x00,  //     Logical Maximum (65535)               478
+#   0x75, 0x10,                    //     Report Size (16)                      483
+#   0x95, 0x01,                    //     Report Count (1)                      485
+# ┇ 0x81, 0x0a,                    //     Input (Data,Var,Abs,,Wrap)            487
+#   0xc0,                          //   End Collection                          489
+# ┅ 0x85, 0x11,                    //   Report ID (17)                          490
+#   0x65, 0x00,                    //   Unit (None)                             492
+#   0x55, 0x00,                    //   Unit Exponent (0)                       494
+#   0x35, 0x00,                    //   Physical Minimum (0)                    496
+#   0x45, 0x00,                    //   Physical Maximum (0)                    498
+# 🭬 0x09, 0x39,                    //   Usage (Wacom DigitizerFnKeys)           500
+#   0xa1, 0x00,                    //   Collection (Physical)                   502
+# 🭬 0x09, 0x39,                    //     Usage (Wacom DigitizerFnKeys)         504
+#   0xa1, 0x00,                    //     Collection (Physical)                 506
+#   0x35, 0x00,                    //       Physical Minimum (0)                508
+#   0x45, 0x00,                    //       Physical Maximum (0)                510
+# 🭬 0x1a, 0x10, 0x09,              //       Usage Minimum (2320)                512
+# 🭬 0x2a, 0x17, 0x09,              //       Usage Maximum (2327)                515
+#   0x15, 0x00,                    //       Logical Minimum (0)                 518
+#   0x25, 0x01,                    //       Logical Maximum (1)                 520
+#   0x75, 0x01,                    //       Report Size (1)                     522
+#   0x95, 0x08,                    //       Report Count (8)                    524
+# ┇ 0x81, 0x02,                    //       Input (Data,Var,Abs)                526
+#   0x95, 0x00,                    //       Report Count (0)                    528
+# ┇ 0x81, 0x03,                    //       Input (Cnst,Var,Abs)                530
+#   0xc0,                          //     End Collection                        532
+#   0x15, 0x00,                    //     Logical Minimum (0)                   533
+#   0x25, 0x00,                    //     Logical Maximum (0)                   535
+#   0x75, 0x08,                    //     Report Size (8)                       537
+#   0x95, 0x01,                    //     Report Count (1)                      539
+# ┇ 0x81, 0x03,                    //     Input (Cnst,Var,Abs)                  541
+# 🭬 0x09, 0x39,                    //     Usage (Wacom DigitizerFnKeys)         543
+#   0xa1, 0x00,                    //     Collection (Physical)                 545
+#   0x35, 0x00,                    //       Physical Minimum (0)                547
+#   0x45, 0x00,                    //       Physical Maximum (0)                549
+# 🭬 0x0a, 0x95, 0x09,              //       Usage (Wacom Button Center)         551
+#   0x15, 0x00,                    //       Logical Minimum (0)                 554
+#   0x25, 0x01,                    //       Logical Maximum (1)                 556
+#   0x75, 0x01,                    //       Report Size (1)                     558
+#   0x95, 0x02,                    //       Report Count (2)                    560
+# ┇ 0x81, 0x02,                    //       Input (Data,Var,Abs)                562
+#   0x95, 0x06,                    //       Report Count (6)                    564
+# ┇ 0x81, 0x03,                    //       Input (Cnst,Var,Abs)                566
+#   0xc0,                          //     End Collection                        568
+# 🭬 0x09, 0x39,                    //     Usage (Wacom DigitizerFnKeys)         569
+#   0xa1, 0x00,                    //     Collection (Physical)                 571
+# 🭬 0x0a, 0x38, 0x01,              //       Usage (Wacom TouchRing)             573
+#   0x65, 0x14,                    //       Unit (EnglishRotation: deg)         576
+#   0x55, 0x00,                    //       Unit Exponent (0)                   578
+#   0x36, 0x4c, 0xff,              //       Physical Minimum (65356)            580
+#   0x46, 0xb4, 0x00,              //       Physical Maximum (180)              583
+#   0x15, 0xf4,                    //       Logical Minimum (244)               586
+#   0x25, 0x0c,                    //       Logical Maximum (12)                588
+#   0x75, 0x07,                    //       Report Size (7)                     590
+#   0x95, 0x01,                    //       Report Count (1)                    592
+# ┇ 0x81, 0x06,                    //       Input (Data,Var,Rel)                594
+#   0x75, 0x01,                    //       Report Size (1)                     596
+# ┇ 0x81, 0x03,                    //       Input (Cnst,Var,Abs)                598
+#   0xc0,                          //     End Collection                        600
+# 🭬 0x09, 0x39,                    //     Usage (Wacom DigitizerFnKeys)         601
+#   0xa1, 0x00,                    //     Collection (Physical)                 603
+# 🭬 0x0a, 0x38, 0x01,              //       Usage (Wacom TouchRing)             605
+#   0x65, 0x14,                    //       Unit (EnglishRotation: deg)         608
+#   0x55, 0x00,                    //       Unit Exponent (0)                   610
+#   0x36, 0x4c, 0xff,              //       Physical Minimum (65356)            612
+#   0x46, 0xb4, 0x00,              //       Physical Maximum (180)              615
+#   0x15, 0xf4,                    //       Logical Minimum (244)               618
+#   0x25, 0x0c,                    //       Logical Maximum (12)                620
+#   0x75, 0x07,                    //       Report Size (7)                     622
+#   0x95, 0x01,                    //       Report Count (1)                    624
+# ┇ 0x81, 0x06,                    //       Input (Data,Var,Rel)                626
+#   0x75, 0x01,                    //       Report Size (1)                     628
+# ┇ 0x81, 0x03,                    //       Input (Cnst,Var,Abs)                630
+#   0xc0,                          //     End Collection                        632
+#   0x15, 0x00,                    //     Logical Minimum (0)                   633
+#   0x25, 0x00,                    //     Logical Maximum (0)                   635
+#   0x75, 0x08,                    //     Report Size (8)                       637
+#   0x95, 0x03,                    //     Report Count (3)                      639
+# ┇ 0x81, 0x03,                    //     Input (Cnst,Var,Abs)                  641
+#   0xc0,                          //   End Collection                          643
+# ┅ 0x85, 0x13,                    //   Report ID (19)                          644
+#   0x65, 0x00,                    //   Unit (None)                             646
+#   0x55, 0x00,                    //   Unit Exponent (0)                       648
+#   0x35, 0x00,                    //   Physical Minimum (0)                    650
+#   0x45, 0x00,                    //   Physical Maximum (0)                    652
+# 🭬 0x0a, 0x13, 0x10,              //   Usage (Wacom Digitizer Info)            654
+#   0xa1, 0x00,                    //   Collection (Physical)                   657
+# 🭬 0x0a, 0x13, 0x10,              //     Usage (Wacom Digitizer Info)          659
+#   0xa1, 0x00,                    //     Collection (Physical)                 662
+#   0x35, 0x00,                    //       Physical Minimum (0)                664
+#   0x45, 0x00,                    //       Physical Maximum (0)                666
+# 🮥 0x05, 0x0d,                    //       Usage Page (Digitizers)             668
+# 🭬 0x09, 0x3b,                    //       Usage (Battery Strength)            670
+#   0x15, 0x00,                    //       Logical Minimum (0)                 672
+#   0x25, 0x64,                    //       Logical Maximum (100)               674
+#   0x75, 0x07,                    //       Report Size (7)                     676
+#   0x95, 0x01,                    //       Report Count (1)                    678
+# ┇ 0x81, 0x02,                    //       Input (Data,Var,Abs)                680
+# 🮥 0x06, 0x0d, 0xff,              //       Usage Page (Wacom)                  682
+# 🭬 0x0a, 0x04, 0x04,              //       Usage (Wacom Battery Charging)      685
+#   0x25, 0x01,                    //       Logical Maximum (1)                 688
+#   0x75, 0x01,                    //       Report Size (1)                     690
+# ┇ 0x81, 0x02,                    //       Input (Data,Var,Abs)                692
+#   0xc0,                          //     End Collection                        694
+# 🭬 0x0a, 0x13, 0x10,              //     Usage (Wacom Digitizer Info)          695
+#   0xa1, 0x00,                    //     Collection (Physical)                 698
+#   0x35, 0x00,                    //       Physical Minimum (0)                700
+#   0x45, 0x00,                    //       Physical Maximum (0)                702
+#   0x15, 0x00,                    //       Logical Minimum (0)                 704
+# 🭬 0x09, 0x00,                    //       Usage (0x0000)                      706
+#   0x25, 0x00,                    //       Logical Maximum (0)                 708
+#   0x75, 0x01,                    //       Report Size (1)                     710
+#   0x95, 0x01,                    //       Report Count (1)                    712
+# ┇ 0x81, 0x03,                    //       Input (Cnst,Var,Abs)                714
+# 🭬 0x0a, 0x41, 0x04,              //       Usage (0x0441)                      716
+#   0x25, 0x07,                    //       Logical Maximum (7)                 719
+#   0x75, 0x03,                    //       Report Size (3)                     721
+#   0x95, 0x02,                    //       Report Count (2)                    723
+# ┇ 0x81, 0x02,                    //       Input (Data,Var,Abs)                725
+# 🭬 0x09, 0x00,                    //       Usage (0x0000)                      727
+#   0x25, 0x00,                    //       Logical Maximum (0)                 729
+#   0x75, 0x01,                    //       Report Size (1)                     731
+#   0x95, 0x01,                    //       Report Count (1)                    733
+# ┇ 0x81, 0x03,                    //       Input (Cnst,Var,Abs)                735
+#   0xc0,                          //     End Collection                        737
+#   0x15, 0x00,                    //     Logical Minimum (0)                   738
+#   0x25, 0x00,                    //     Logical Maximum (0)                   740
+#   0x75, 0x08,                    //     Report Size (8)                       742
+#   0x95, 0x06,                    //     Report Count (6)                      744
+# ┇ 0x81, 0x03,                    //     Input (Cnst,Var,Abs)                  746
+#   0xc0,                          //   End Collection                          748
+# 🭬 0x09, 0x0e,                    //   Usage (Device Configuration)            749
+#   0xa1, 0x02,                    //   Collection (Logical)                    751
+# ┅ 0x85, 0x02,                    //     Report ID (2)                         753
+# 🭬 0x0a, 0x02, 0x10,              //     Usage (Wacom DataMode)                755
+#   0x15, 0x01,                    //     Logical Minimum (1)                   758
+#   0x25, 0x02,                    //     Logical Maximum (2)                   760
+#   0x75, 0x08,                    //     Report Size (8)                       762
+#   0x95, 0x01,                    //     Report Count (1)                      764
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                766
+# ┅ 0x85, 0x03,                    //     Report ID (3)                         768
+# 🭬 0x0a, 0x03, 0x10,              //     Usage (0x1003)                        770
+#   0x15, 0x00,                    //     Logical Minimum (0)                   773
+#   0x26, 0xff, 0x00,              //     Logical Maximum (255)                 775
+#   0x95, 0x01,                    //     Report Count (1)                      778
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                780
+# ┅ 0x85, 0x04,                    //     Report ID (4)                         782
+# 🭬 0x0a, 0x04, 0x10,              //     Usage (0x1004)                        784
+#   0x15, 0x00,                    //     Logical Minimum (0)                   787
+#   0x25, 0x01,                    //     Logical Maximum (1)                   789
+#   0x95, 0x01,                    //     Report Count (1)                      791
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                793
+# ┅ 0x85, 0x07,                    //     Report ID (7)                         795
+# 🭬 0x0a, 0x09, 0x10,              //     Usage (0x1009)                        797
+#   0x15, 0x00,                    //     Logical Minimum (0)                   800
+#   0x26, 0xff, 0x00,              //     Logical Maximum (255)                 802
+#   0x95, 0x01,                    //     Report Count (1)                      805
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                807
+# ║ 0xb1, 0x03,                    //     Feature (Cnst,Var,Abs)                809
+# 🭬 0x0a, 0x07, 0x10,              //     Usage (0x1007)                        811
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        814
+# 🭬 0x0a, 0x08, 0x10,              //     Usage (0x1008)                        816
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        819
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        821
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        823
+#   0x27, 0xff, 0xff, 0x00, 0x00,  //     Logical Maximum (65535)               825
+#   0x75, 0x10,                    //     Report Size (16)                      830
+#   0x95, 0x06,                    //     Report Count (6)                      832
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                834
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        836
+#   0x25, 0x00,                    //     Logical Maximum (0)                   838
+#   0x75, 0x08,                    //     Report Size (8)                       840
+#   0x95, 0x01,                    //     Report Count (1)                      842
+# ║ 0xb1, 0x03,                    //     Feature (Cnst,Var,Abs)                844
+# ┅ 0x85, 0x0c,                    //     Report ID (12)                        846
+# 🭬 0x0a, 0x30, 0x0d,              //     Usage (Wacom Offset Left)             848
+# 🭬 0x0a, 0x31, 0x0d,              //     Usage (Wacom Offset Top)              851
+# 🭬 0x0a, 0x32, 0x0d,              //     Usage (Wacom Offset Right)            854
+# 🭬 0x0a, 0x33, 0x0d,              //     Usage (Wacom Offset Bottom)           857
+#   0x65, 0x11,                    //     Unit (SILinear: cm)                   860
+#   0x55, 0x0d,                    //     Unit Exponent (-3)                    862
+#   0x35, 0x00,                    //     Physical Minimum (0)                  864
+#   0x46, 0xc8, 0x00,              //     Physical Maximum (200)                866
+#   0x15, 0x00,                    //     Logical Minimum (0)                   869
+#   0x26, 0x90, 0x01,              //     Logical Maximum (400)                 871
+#   0x75, 0x10,                    //     Report Size (16)                      874
+#   0x95, 0x04,                    //     Report Count (4)                      876
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                878
+# ┅ 0x85, 0x0d,                    //     Report ID (13)                        880
+# 🭬 0x0a, 0x0d, 0x10,              //     Usage (0x100D)                        882
+#   0x65, 0x00,                    //     Unit (None)                           885
+#   0x55, 0x00,                    //     Unit Exponent (0)                     887
+#   0x45, 0x00,                    //     Physical Maximum (0)                  889
+#   0x25, 0x01,                    //     Logical Maximum (1)                   891
+#   0x75, 0x08,                    //     Report Size (8)                       893
+#   0x95, 0x01,                    //     Report Count (1)                      895
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                897
+# ┅ 0x85, 0x14,                    //     Report ID (20)                        899
+# 🭬 0x0a, 0x14, 0x10,              //     Usage (0x1014)                        901
+#   0x26, 0xff, 0x00,              //     Logical Maximum (255)                 904
+#   0x95, 0x0d,                    //     Report Count (13)                     907
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                909
+# ┅ 0x85, 0x1c,                    //     Report ID (28)                        911
+# 🭬 0x0a, 0x15, 0x10,              //     Usage (0x1015)                        913
+#   0x26, 0xff, 0x00,              //     Logical Maximum (255)                 916
+#   0x95, 0x1a,                    //     Report Count (26)                     919
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                921
+# ┅ 0x85, 0xcc,                    //     Report ID (204)                       923
+# 🭬 0x0a, 0xcc, 0x10,              //     Usage (0x10CC)                        925
+#   0x95, 0x02,                    //     Report Count (2)                      928
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                930
+#   0xc0,                          //   End Collection                          932
+# 🭬 0x09, 0x0e,                    //   Usage (Device Configuration)            933
+#   0xa1, 0x02,                    //   Collection (Logical)                    935
+# ┅ 0x85, 0x16,                    //     Report ID (22)                        937
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        939
+#   0x95, 0x0e,                    //     Report Count (14)                     941
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                943
+# ┅ 0x85, 0x35,                    //     Report ID (53)                        945
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        947
+#   0x95, 0x0a,                    //     Report Count (10)                     949
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                951
+# ┅ 0x85, 0x31,                    //     Report ID (49)                        953
+# 🭬 0x0a, 0x31, 0x10,              //     Usage (0x1031)                        955
+#   0x25, 0x64,                    //     Logical Maximum (100)                 958
+#   0x95, 0x03,                    //     Report Count (3)                      960
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                962
+#   0x95, 0x02,                    //     Report Count (2)                      964
+# ║ 0xb1, 0x03,                    //     Feature (Cnst,Var,Abs)                966
+# ┅ 0x85, 0x37,                    //     Report ID (55)                        968
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        970
+#   0x26, 0xff, 0x00,              //     Logical Maximum (255)                 972
+#   0x75, 0x08,                    //     Report Size (8)                       975
+#   0x95, 0x09,                    //     Report Count (9)                      977
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                979
+# ┅ 0x85, 0x38,                    //     Report ID (56)                        981
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        983
+#   0x26, 0xff, 0x00,              //     Logical Maximum (255)                 985
+#   0x75, 0x08,                    //     Report Size (8)                       988
+#   0x95, 0x06,                    //     Report Count (6)                      990
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                992
+# ┅ 0x85, 0x39,                    //     Report ID (57)                        994
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        996
+#   0x26, 0xff, 0x00,              //     Logical Maximum (255)                 998
+#   0x75, 0x08,                    //     Report Size (8)                       1001
+#   0x95, 0x05,                    //     Report Count (5)                      1003
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                1005
+#   0xc0,                          //   End Collection                          1007
+# 🭬 0x0a, 0xac, 0x10,              //   Usage (0x10AC)                          1008
+#   0xa1, 0x02,                    //   Collection (Logical)                    1011
+#   0x15, 0x00,                    //     Logical Minimum (0)                   1013
+#   0x26, 0xff, 0x00,              //     Logical Maximum (255)                 1015
+#   0x75, 0x08,                    //     Report Size (8)                       1018
+# ┅ 0x85, 0xac,                    //     Report ID (172)                       1020
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        1022
+#   0x96, 0xbf, 0x00,              //     Report Count (191)                    1024
+# ┇ 0x81, 0x02,                    //     Input (Data,Var,Abs)                  1027
+# ┅ 0x85, 0x15,                    //     Report ID (21)                        1029
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        1031
+#   0x95, 0x0e,                    //     Report Count (14)                     1033
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                1035
+# ┅ 0x85, 0x33,                    //     Report ID (51)                        1037
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        1039
+#   0x95, 0x12,                    //     Report Count (18)                     1041
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                1043
+# ┅ 0x85, 0x44,                    //     Report ID (68)                        1045
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        1047
+#   0x95, 0x04,                    //     Report Count (4)                      1049
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                1051
+# ┅ 0x85, 0x45,                    //     Report ID (69)                        1053
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        1055
+#   0x95, 0x20,                    //     Report Count (32)                     1057
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                1059
+# ┅ 0x85, 0x60,                    //     Report ID (96)                        1061
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        1063
+#   0x95, 0x3f,                    //     Report Count (63)                     1065
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                1067
+# ┅ 0x85, 0x61,                    //     Report ID (97)                        1069
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        1071
+#   0x95, 0x3e,                    //     Report Count (62)                     1073
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                1075
+# ┅ 0x85, 0x62,                    //     Report ID (98)                        1077
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        1079
+#   0x95, 0x3e,                    //     Report Count (62)                     1081
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                1083
+# ┅ 0x85, 0x65,                    //     Report ID (101)                       1085
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        1087
+#   0x95, 0x04,                    //     Report Count (4)                      1089
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                1091
+# ┅ 0x85, 0x66,                    //     Report ID (102)                       1093
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        1095
+#   0x95, 0x04,                    //     Report Count (4)                      1097
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                1099
+# ┅ 0x85, 0x67,                    //     Report ID (103)                       1101
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        1103
+#   0x95, 0x04,                    //     Report Count (4)                      1105
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                1107
+# ┅ 0x85, 0x68,                    //     Report ID (104)                       1109
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        1111
+#   0x95, 0x11,                    //     Report Count (17)                     1113
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                1115
+# ┅ 0x85, 0x6f,                    //     Report ID (111)                       1117
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        1119
+#   0x95, 0x3e,                    //     Report Count (62)                     1121
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                1123
+# ┅ 0x85, 0xcd,                    //     Report ID (205)                       1125
+# 🭬 0x09, 0x00,                    //     Usage (0x0000)                        1127
+#   0x95, 0x02,                    //     Report Count (2)                      1129
+# ║ 0xb1, 0x02,                    //     Feature (Data,Var,Abs)                1131
+#   0xc0,                          //   End Collection                          1133
+# ┅ 0x85, 0xd1,                    //   Report ID (209)                         1134
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1136
+#   0x96, 0x04, 0x01,              //   Report Count (260)                      1138
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1141
+# ┅ 0x85, 0xd2,                    //   Report ID (210)                         1143
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1145
+#   0x96, 0x04, 0x01,              //   Report Count (260)                      1147
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1150
+# ┅ 0x85, 0xd3,                    //   Report ID (211)                         1152
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1154
+#   0x96, 0x04, 0x00,              //   Report Count (4)                        1156
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1159
+# ┅ 0x85, 0xd4,                    //   Report ID (212)                         1161
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1163
+#   0x96, 0x04, 0x00,              //   Report Count (4)                        1165
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1168
+# ┅ 0x85, 0xd5,                    //   Report ID (213)                         1170
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1172
+#   0x96, 0x04, 0x00,              //   Report Count (4)                        1174
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1177
+# ┅ 0x85, 0xd6,                    //   Report ID (214)                         1179
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1181
+#   0x96, 0x04, 0x00,              //   Report Count (4)                        1183
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1186
+# ┅ 0x85, 0xd7,                    //   Report ID (215)                         1188
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1190
+#   0x96, 0x14, 0x00,              //   Report Count (20)                       1192
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1195
+# ┅ 0x85, 0xd8,                    //   Report ID (216)                         1197
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1199
+#   0x96, 0x0c, 0x00,              //   Report Count (12)                       1201
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1204
+# ┅ 0x85, 0xd9,                    //   Report ID (217)                         1206
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1208
+#   0x96, 0x00, 0x05,              //   Report Count (1280)                     1210
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1213
+# ┅ 0x85, 0xda,                    //   Report ID (218)                         1215
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1217
+#   0x96, 0x04, 0x02,              //   Report Count (516)                      1219
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1222
+# ┅ 0x85, 0xdb,                    //   Report ID (219)                         1224
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1226
+#   0x96, 0x06, 0x00,              //   Report Count (6)                        1228
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1231
+# ┅ 0x85, 0xdc,                    //   Report ID (220)                         1233
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1235
+#   0x96, 0x02, 0x00,              //   Report Count (2)                        1237
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1240
+# ┅ 0x85, 0xdd,                    //   Report ID (221)                         1242
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1244
+#   0x96, 0x04, 0x00,              //   Report Count (4)                        1246
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1249
+# ┅ 0x85, 0xde,                    //   Report ID (222)                         1251
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1253
+#   0x96, 0x04, 0x00,              //   Report Count (4)                        1255
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1258
+# ┅ 0x85, 0xdf,                    //   Report ID (223)                         1260
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1262
+#   0x96, 0x22, 0x00,              //   Report Count (34)                       1264
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1267
+# ┅ 0x85, 0xe0,                    //   Report ID (224)                         1269
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1271
+#   0x96, 0x01, 0x00,              //   Report Count (1)                        1273
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1276
+# ┅ 0x85, 0xe1,                    //   Report ID (225)                         1278
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1280
+#   0x96, 0x02, 0x00,              //   Report Count (2)                        1282
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1285
+# ┅ 0x85, 0xe2,                    //   Report ID (226)                         1287
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1289
+#   0x96, 0x02, 0x00,              //   Report Count (2)                        1291
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1294
+# ┅ 0x85, 0xe3,                    //   Report ID (227)                         1296
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1298
+#   0x96, 0x02, 0x00,              //   Report Count (2)                        1300
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1303
+# ┅ 0x85, 0xe4,                    //   Report ID (228)                         1305
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1307
+#   0x96, 0xff, 0x01,              //   Report Count (511)                      1309
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1312
+# ┅ 0x85, 0xcb,                    //   Report ID (203)                         1314
+# 🭬 0x09, 0x01,                    //   Usage (Wacom Digitizer)                 1316
+#   0x96, 0x1f, 0x00,              //   Report Count (31)                       1318
+# ║ 0xb1, 0x02,                    //   Feature (Data,Var,Abs)                  1321
+#   0xc0,                          // End Collection                            1323
+R: 1324 05 01 09 80 a1 01 85 fe a1 00 09 82 09 83 15 00 25 01 75 01 95 02 81 06 95 06 81 03 c0 c0 05 0d 09 01 a1 01 85 06 09 20 35 00 45 00 15 00 25 01 a1 00 09 54 25 01 75 08 95 01 81 02 09 42 09 44 09 5a 06 0d ff 09 5d 05 0d 09 45 09 3c 09 32 75 01 95 07 81 02 95 01 81 03 05 01 09 30 65 11 55 0d 47 54 88 00 00 27 ff 7f 00 00 75 10 95 01 81 02 09 31 47 2c 4c 00 00 27 ff 7f 00 00 81 02 05 0d 09 30 65 00 55 00 45 00 26 ff 0f 75 10 81 02 09 3d 09 3e 65 14 55 0e 36 d8 dc 46 28 23 16 d8 dc 26 28 23 75 10 95 02 81 02 06 0d ff 65 00 55 00 0a 32 01 35 00 45 00 15 00 26 ff 00 75 08 95 01 81 02 05 0d 09 56 15 00 27 ff ff 00 00 75 10 95 01 81 0a 06 0d ff 0a 20 02 15 00 27 ff ff 00 00 75 10 95 01 81 0a c0 c0 06 0d ff 09 01 a1 01 85 1e 09 20 35 00 45 00 15 00 25 01 a1 00 09 54 25 01 75 08 95 01 81 02 09 42 09 44 09 5a 09 5d 09 45 09 3c 09 32 09 36 25 01 75 01 95 08 81 02 0a 30 01 65 11 55 0d 47 54 88 00 00 27 a8 10 01 00 75 18 95 01 81 02 0a 31 01 47 2c 4c 00 00 27 58 98 00 00 81 02 09 30 55 00 65 00 45 00 15 00 26 ff 1f 75 10 81 02 09 3d 09 3e 65 14 55 00 35 a6 45 5a 15 a6 25 5a 75 10 95 02 81 02 09 41 65 14 55 00 36 4c ff 46 b3 00 16 7c fc 26 83 03 75 10 95 01 81 0a 0a 03 0d 65 00 55 00 35 00 45 00 15 00 26 ff 07 81 02 0a 32 01 35 00 45 00 15 00 26 ff 00 75 08 95 01 81 02 09 5b 09 5c 17 00 00 00 80 27 ff ff ff 7f 75 20 95 02 81 02 09 77 15 00 26 ff 0f 75 10 95 01 81 02 09 56 15 00 27 ff ff 00 00 75 10 95 01 81 0a 0a 20 02 15 00 27 ff ff 00 00 75 10 95 01 81 0a c0 85 11 65 00 55 00 35 00 45 00 09 39 a1 00 09 39 a1 00 35 00 45 00 1a 10 09 2a 17 09 15 00 25 01 75 01 95 08 81 02 95 00 81 03 c0 15 00 25 00 75 08 95 01 81 03 09 39 a1 00 35 00 45 00 0a 95 09 15 00 25 01 75 01 95 02 81 02 95 06 81 03 c0 09 39 a1 00 0a 38 01 65 14 55 00 36 4c ff 46 b4 00 15 f4 25 0c 75 07 95 01 81 06 75 01 81 03 c0 09 39 a1 00 0a 38 01 65 14 55 00 36 4c ff 46 b4 00 15 f4 25 0c 75 07 95 01 81 06 75 01 81 03 c0 15 00 25 00 75 08 95 03 81 03 c0 85 13 65 00 55 00 35 00 45 00 0a 13 10 a1 00 0a 13 10 a1 00 35 00 45 00 05 0d 09 3b 15 00 25 64 75 07 95 01 81 02 06 0d ff 0a 04 04 25 01 75 01 81 02 c0 0a 13 10 a1 00 35 00 45 00 15 00 09 00 25 00 75 01 95 01 81 03 0a 41 04 25 07 75 03 95 02 81 02 09 00 25 00 75 01 95 01 81 03 c0 15 00 25 00 75 08 95 06 81 03 c0 09 0e a1 02 85 02 0a 02 10 15 01 25 02 75 08 95 01 b1 02 85 03 0a 03 10 15 00 26 ff 00 95 01 b1 02 85 04 0a 04 10 15 00 25 01 95 01 b1 02 85 07 0a 09 10 15 00 26 ff 00 95 01 b1 02 b1 03 0a 07 10 09 00 0a 08 10 09 00 09 00 09 00 27 ff ff 00 00 75 10 95 06 b1 02 09 00 25 00 75 08 95 01 b1 03 85 0c 0a 30 0d 0a 31 0d 0a 32 0d 0a 33 0d 65 11 55 0d 35 00 46 c8 00 15 00 26 90 01 75 10 95 04 b1 02 85 0d 0a 0d 10 65 00 55 00 45 00 25 01 75 08 95 01 b1 02 85 14 0a 14 10 26 ff 00 95 0d b1 02 85 1c 0a 15 10 26 ff 00 95 1a b1 02 85 cc 0a cc 10 95 02 b1 02 c0 09 0e a1 02 85 16 09 00 95 0e b1 02 85 35 09 00 95 0a b1 02 85 31 0a 31 10 25 64 95 03 b1 02 95 02 b1 03 85 37 09 00 26 ff 00 75 08 95 09 b1 02 85 38 09 00 26 ff 00 75 08 95 06 b1 02 85 39 09 00 26 ff 00 75 08 95 05 b1 02 c0 0a ac 10 a1 02 15 00 26 ff 00 75 08 85 ac 09 00 96 bf 00 81 02 85 15 09 00 95 0e b1 02 85 33 09 00 95 12 b1 02 85 44 09 00 95 04 b1 02 85 45 09 00 95 20 b1 02 85 60 09 00 95 3f b1 02 85 61 09 00 95 3e b1 02 85 62 09 00 95 3e b1 02 85 65 09 00 95 04 b1 02 85 66 09 00 95 04 b1 02 85 67 09 00 95 04 b1 02 85 68 09 00 95 11 b1 02 85 6f 09 00 95 3e b1 02 85 cd 09 00 95 02 b1 02 c0 85 d1 09 01 96 04 01 b1 02 85 d2 09 01 96 04 01 b1 02 85 d3 09 01 96 04 00 b1 02 85 d4 09 01 96 04 00 b1 02 85 d5 09 01 96 04 00 b1 02 85 d6 09 01 96 04 00 b1 02 85 d7 09 01 96 14 00 b1 02 85 d8 09 01 96 0c 00 b1 02 85 d9 09 01 96 00 05 b1 02 85 da 09 01 96 04 02 b1 02 85 db 09 01 96 06 00 b1 02 85 dc 09 01 96 02 00 b1 02 85 dd 09 01 96 04 00 b1 02 85 de 09 01 96 04 00 b1 02 85 df 09 01 96 22 00 b1 02 85 e0 09 01 96 01 00 b1 02 85 e1 09 01 96 02 00 b1 02 85 e2 09 01 96 02 00 b1 02 85 e3 09 01 96 02 00 b1 02 85 e4 09 01 96 ff 01 b1 02 85 cb 09 01 96 1f 00 b1 02 c0
+N: Wacom Co.,Ltd. Wacom Intuos Pro L
+I: 3 56a 3f9
+# Report descriptor:
+# ------- Input Report ------- 
+# ▒ Report ID: 254
+# ▒  | Report size: 16 bits
+# ▒ Bit:    8       Usage: 0001/0082: Generic Desktop / System Sleep              Logical Range:     0..=1     
+# ▒ Bit:    9       Usage: 0001/0083: Generic Desktop / System Wake Up            Logical Range:     0..=1     
+# ▒ Bits:  10..=15  ######### Padding                                             
+# ------- Input Report ------- 
+# ▃ Report ID: 6
+# ▃  | Report size: 144 bits
+# ▃ Bits:   8..=15  Usage: 000d/0054: Digitizers / Contact Count                  Logical Range:     0..=1     Physical Range:     0..=0     
+# ▃ Bit:   16       Usage: 000d/0042: Digitizers / Tip Switch                     Logical Range:     0..=1     Physical Range:     0..=0     
+# ▃ Bit:   17       Usage: 000d/0044: Digitizers / Barrel Switch                  Logical Range:     0..=1     Physical Range:     0..=0     
+# ▃ Bit:   18       Usage: 000d/005a: Digitizers / Secondary Barrel Switch        Logical Range:     0..=1     Physical Range:     0..=0     
+# ▃ Bit:   19       Usage: 000d/005d: Digitizers / Preferred Color is Locked      Logical Range:     0..=1     Physical Range:     0..=0     
+# ▃ Bit:   20       Usage: 000d/0045: Digitizers / Eraser                         Logical Range:     0..=1     Physical Range:     0..=0     
+# ▃ Bit:   21       Usage: 000d/003c: Digitizers / Invert                         Logical Range:     0..=1     Physical Range:     0..=0     
+# ▃ Bit:   22       Usage: 000d/0032: Digitizers / In Range                       Logical Range:     0..=1     Physical Range:     0..=0     
+# ▃ Bit:   23       ######### Padding                                             
+# ▃ Bits:  24..=39  Usage: 0001/0030: Generic Desktop / X                         Logical Range:     0..=32767 Physical Range:     0..=34900 Unit: SILinear: cm         
+# ▃ Bits:  40..=55  Usage: 0001/0031: Generic Desktop / Y                         Logical Range:     0..=32767 Physical Range:     0..=19500 Unit: SILinear: cm         
+# ▃ Bits:  56..=71  Usage: 000d/0030: Digitizers / Tip Pressure                   Logical Range:     0..=4095  Physical Range:     0..=0     
+# ▃ Bits:  72..=87  Usage: 000d/003d: Digitizers / X Tilt                         Logical Range: 56536..=9000  Physical Range: 56536..=9000  Unit: EnglishRotation: deg 
+# ▃ Bits:  88..=103 Usage: 000d/003e: Digitizers / Y Tilt                         Logical Range: 56536..=9000  Physical Range: 56536..=9000  Unit: EnglishRotation: deg 
+# ▃ Bits: 104..=111 Usage: ff0d/0132: Wacom / Wacom Distance                      Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits: 112..=127 Usage: 000d/0056: Digitizers / Scan Time                      Logical Range:     0..=65535 Physical Range:     0..=0     
+# ▃ Bits: 128..=143 Usage: ff0d/0220: <unknown>                                   Logical Range:     0..=65535 Physical Range:     0..=0     
+# ------- Input Report ------- 
+# ▒ Report ID: 30
+# ▒  | Report size: 272 bits
+# ▒ Bits:   8..=15  Usage: ff0d/0054: Wacom / Contact Count                       Logical Range:     0..=1                Physical Range:     0..=0     
+# ▒ Bit:   16       Usage: ff0d/0042: Wacom / Tip Switch                          Logical Range:     0..=1                Physical Range:     0..=0     
+# ▒ Bit:   17       Usage: ff0d/0044: Wacom / Barrel Switch                       Logical Range:     0..=1                Physical Range:     0..=0     
+# ▒ Bit:   18       Usage: ff0d/005a: Wacom / Secondary Barrel Switch             Logical Range:     0..=1                Physical Range:     0..=0     
+# ▒ Bit:   19       Usage: ff0d/005d: Wacom / Preferred Color is Locked           Logical Range:     0..=1                Physical Range:     0..=0     
+# ▒ Bit:   20       Usage: ff0d/0045: Wacom / Eraser                              Logical Range:     0..=1                Physical Range:     0..=0     
+# ▒ Bit:   21       Usage: ff0d/003c: Wacom / Invert                              Logical Range:     0..=1                Physical Range:     0..=0     
+# ▒ Bit:   22       Usage: ff0d/0032: Wacom / In Range                            Logical Range:     0..=1                Physical Range:     0..=0     
+# ▒ Bit:   23       Usage: ff0d/0036: Wacom / Wacom Sense                         Logical Range:     0..=1                Physical Range:     0..=0     
+# ▒ Bits:  24..=47  Usage: ff0d/0130: Wacom / X                                   Logical Range:     0..=69800            Physical Range:     0..=34900 Unit: SILinear: cm         
+# ▒ Bits:  48..=71  Usage: ff0d/0131: Wacom / Y                                   Logical Range:     0..=39000            Physical Range:     0..=19500 Unit: SILinear: cm         
+# ▒ Bits:  72..=87  Usage: ff0d/0030: Wacom / Tip Pressure                        Logical Range:     0..=8191             Physical Range:     0..=0     
+# ▒ Bits:  88..=103 Usage: ff0d/003d: Wacom / X Tilt                              Logical Range:   166..=90               Physical Range:   166..=90    Unit: EnglishRotation: deg 
+# ▒ Bits: 104..=119 Usage: ff0d/003e: Wacom / Y Tilt                              Logical Range:   166..=90               Physical Range:   166..=90    Unit: EnglishRotation: deg 
+# ▒ Bits: 120..=135 Usage: ff0d/0041: Wacom / Twist                               Logical Range: 64636..=899              Physical Range: 65356..=179   Unit: EnglishRotation: deg 
+# ▒ Bits: 136..=151 Usage: ff0d/0d03: Wacom / Wacom FingerWheel                   Logical Range:     0..=2047             Physical Range:     0..=0     
+# ▒ Bits: 152..=159 Usage: ff0d/0132: Wacom / Wacom Distance                      Logical Range:     0..=255              Physical Range:     0..=0     
+# ▒ Bits: 160..=191 Usage: ff0d/005b: Wacom / Transducer Serial Number            Logical Range: -2147483648..=0x7fffffff Physical Range:     0..=0     
+# ▒ Bits: 192..=223 Usage: ff0d/005c: Wacom / Wacom SerialHi                      Logical Range: -2147483648..=0x7fffffff Physical Range:     0..=0     
+# ▒ Bits: 224..=239 Usage: ff0d/0077: Wacom / Wacom ToolType                      Logical Range:     0..=4095             Physical Range:     0..=0     
+# ▒ Bits: 240..=255 Usage: ff0d/0056: Wacom / Scan Time                           Logical Range:     0..=65535            Physical Range:     0..=0     
+# ▒ Bits: 256..=271 Usage: ff0d/0220: <unknown>                                   Logical Range:     0..=65535            Physical Range:     0..=0     
+# ------- Input Report ------- 
+# ▓ Report ID: 17
+# ▓  | Report size: 72 bits
+# ▓ Bit:    8       Usage: ff0d/0910: Wacom / Wacom ExpressKey00                  Logical Range:     0..=1     Physical Range:     0..=0     
+# ▓ Bit:    9       Usage: ff0d/0911: <unknown>                                   Logical Range:     0..=1     Physical Range:     0..=0     
+# ▓ Bit:   10       Usage: ff0d/0912: <unknown>                                   Logical Range:     0..=1     Physical Range:     0..=0     
+# ▓ Bit:   11       Usage: ff0d/0913: <unknown>                                   Logical Range:     0..=1     Physical Range:     0..=0     
+# ▓ Bit:   12       Usage: ff0d/0914: <unknown>                                   Logical Range:     0..=1     Physical Range:     0..=0     
+# ▓ Bit:   13       Usage: ff0d/0915: <unknown>                                   Logical Range:     0..=1     Physical Range:     0..=0     
+# ▓ Bit:   14       Usage: ff0d/0916: <unknown>                                   Logical Range:     0..=1     Physical Range:     0..=0     
+# ▓ Bit:   15       Usage: ff0d/0917: <unknown>                                   Logical Range:     0..=1     Physical Range:     0..=0     
+# ▓ Bits:  16..=23  ######### Padding                                             
+# ▓ Bit:   24       Usage: ff0d/0995: Wacom / Wacom Button Center                 Logical Range:     0..=1     Physical Range:     0..=0     
+# ▓ Bit:   25       Usage: ff0d/0995: Wacom / Wacom Button Center                 Logical Range:     0..=1     Physical Range:     0..=0     
+# ▓ Bits:  26..=31  ######### Padding                                             
+# ▓ Bits:  32..=38  Usage: ff0d/0138: Wacom / Wacom TouchRing                     Logical Range:   244..=12    Physical Range: 65356..=180   Unit: EnglishRotation: deg 
+# ▓ Bit:   39       ######### Padding                                             
+# ▓ Bits:  40..=46  Usage: ff0d/0138: Wacom / Wacom TouchRing                     Logical Range:   244..=12    Physical Range: 65356..=180   Unit: EnglishRotation: deg 
+# ▓ Bit:   47       ######### Padding                                             
+# ▓ Bits:  48..=71  ######### Padding                                             
+# ------- Input Report ------- 
+# ▞ Report ID: 19
+# ▞  | Report size: 72 bits
+# ▞ Bits:   8..=14  Usage: 000d/003b: Digitizers / Battery Strength               Logical Range:     0..=100   Physical Range:     0..=0     
+# ▞ Bit:   15       Usage: ff0d/0404: Wacom / Wacom Battery Charging              Logical Range:     0..=1     Physical Range:     0..=0     
+# ▞ Bit:   16       ######### Padding                                             
+# ▞ Bits:  17..=19  Usage: ff0d/0441: <unknown>                                   Logical Range:     0..=7     Physical Range:     0..=0     
+# ▞ Bits:  20..=22  Usage: ff0d/0441: <unknown>                                   Logical Range:     0..=7     Physical Range:     0..=0     
+# ▞ Bit:   23       ######### Padding                                             
+# ▞ Bits:  24..=71  ######### Padding                                             
+# ------- Input Report ------- 
+# ▚ Report ID: 172
+# ▚  | Report size: 1536 bits
+# ▚ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚                 Total of 191 repeated usages, use --full to see all           
+# ------- Feature Report ------- 
+# ▒ Report ID: 2
+# ▒  | Report size: 16 bits
+# ▒ Bits:   8..=15  Usage: ff0d/1002: Wacom / Wacom DataMode                      Logical Range:     1..=2     Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▓ Report ID: 3
+# ▓  | Report size: 16 bits
+# ▓ Bits:   8..=15  Usage: ff0d/1003: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▚ Report ID: 4
+# ▚  | Report size: 16 bits
+# ▚ Bits:   8..=15  Usage: ff0d/1004: <unknown>                                   Logical Range:     0..=1     Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▘ Report ID: 7
+# ▘  | Report size: 128 bits
+# ▘ Bits:   8..=15  Usage: ff0d/1009: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  16..=23  ######### Padding                                             
+# ▘ Bits:  24..=39  Usage: ff0d/1007: <unknown>                                   Logical Range:     0..=65535 Physical Range:     0..=0     
+# ▘ Bits:  40..=55  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=65535 Physical Range:     0..=0     
+# ▘ Bits:  56..=71  Usage: ff0d/1008: <unknown>                                   Logical Range:     0..=65535 Physical Range:     0..=0     
+# ▘ Bits:  72..=87  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=65535 Physical Range:     0..=0     
+# ▘ Bits:  88..=103 Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=65535 Physical Range:     0..=0     
+# ▘ Bits: 104..=119 Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=65535 Physical Range:     0..=0     
+# ▘ Bits: 120..=127 ######### Padding                                             
+# ------- Feature Report ------- 
+# ▞ Report ID: 12
+# ▞  | Report size: 72 bits
+# ▞ Bits:   8..=23  Usage: ff0d/0d30: Wacom / Wacom Offset Left                   Logical Range:     0..=400   Physical Range:     0..=200   Unit: SILinear: cm 
+# ▞ Bits:  24..=39  Usage: ff0d/0d31: Wacom / Wacom Offset Top                    Logical Range:     0..=400   Physical Range:     0..=200   Unit: SILinear: cm 
+# ▞ Bits:  40..=55  Usage: ff0d/0d32: Wacom / Wacom Offset Right                  Logical Range:     0..=400   Physical Range:     0..=200   Unit: SILinear: cm 
+# ▞ Bits:  56..=71  Usage: ff0d/0d33: Wacom / Wacom Offset Bottom                 Logical Range:     0..=400   Physical Range:     0..=200   Unit: SILinear: cm 
+# ------- Feature Report ------- 
+# ▃ Report ID: 13
+# ▃  | Report size: 16 bits
+# ▃ Bits:   8..=15  Usage: ff0d/100d: <unknown>                                   Logical Range:     0..=1     Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▃ Report ID: 20
+# ▃  | Report size: 112 bits
+# ▃ Bits:   8..=15  Usage: ff0d/1014: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  16..=23  Usage: ff0d/1014: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  24..=31  Usage: ff0d/1014: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  32..=39  Usage: ff0d/1014: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃                 Total of 13 repeated usages, use --full to see all            
+# ------- Feature Report ------- 
+# ▘ Report ID: 28
+# ▘  | Report size: 216 bits
+# ▘ Bits:   8..=15  Usage: ff0d/1015: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  16..=23  Usage: ff0d/1015: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  24..=31  Usage: ff0d/1015: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  32..=39  Usage: ff0d/1015: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘                 Total of 26 repeated usages, use --full to see all            
+# ------- Feature Report ------- 
+# ░ Report ID: 204
+# ░  | Report size: 24 bits
+# ░ Bits:   8..=15  Usage: ff0d/10cc: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ░ Bits:  16..=23  Usage: ff0d/10cc: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ░ Report ID: 22
+# ░  | Report size: 120 bits
+# ░ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ░ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ░ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ░ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ░                 Total of 14 repeated usages, use --full to see all            
+# ------- Feature Report ------- 
+# ▚ Report ID: 53
+# ▚  | Report size: 88 bits
+# ▚ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚                 Total of 10 repeated usages, use --full to see all            
+# ------- Feature Report ------- 
+# ▘ Report ID: 49
+# ▘  | Report size: 48 bits
+# ▘ Bits:   8..=15  Usage: ff0d/1031: <unknown>                                   Logical Range:     0..=100   Physical Range:     0..=0     
+# ▘ Bits:  16..=23  Usage: ff0d/1031: <unknown>                                   Logical Range:     0..=100   Physical Range:     0..=0     
+# ▘ Bits:  24..=31  Usage: ff0d/1031: <unknown>                                   Logical Range:     0..=100   Physical Range:     0..=0     
+# ▘ Bits:  32..=47  ######### Padding                                             
+# ------- Feature Report ------- 
+# ▃ Report ID: 55
+# ▃  | Report size: 80 bits
+# ▃ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃                 Total of 9 repeated usages, use --full to see all             
+# ------- Feature Report ------- 
+# ▘ Report ID: 56
+# ▘  | Report size: 56 bits
+# ▘ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘                 Total of 6 repeated usages, use --full to see all             
+# ------- Feature Report ------- 
+# ░ Report ID: 57
+# ░  | Report size: 48 bits
+# ░ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ░ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ░ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ░ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ░                 Total of 5 repeated usages, use --full to see all             
+# ------- Feature Report ------- 
+# ▘ Report ID: 21
+# ▘  | Report size: 120 bits
+# ▘ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘                 Total of 14 repeated usages, use --full to see all            
+# ------- Feature Report ------- 
+# ▒ Report ID: 51
+# ▒  | Report size: 152 bits
+# ▒ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▒ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▒ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▒ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▒                 Total of 18 repeated usages, use --full to see all            
+# ------- Feature Report ------- 
+# ▞ Report ID: 68
+# ▞  | Report size: 40 bits
+# ▞ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▞ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▞ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▞ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▃ Report ID: 69
+# ▃  | Report size: 264 bits
+# ▃ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃                 Total of 32 repeated usages, use --full to see all            
+# ------- Feature Report ------- 
+# ▞ Report ID: 96
+# ▞  | Report size: 512 bits
+# ▞ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▞ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▞ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▞ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▞                 Total of 63 repeated usages, use --full to see all            
+# ------- Feature Report ------- 
+# ▃ Report ID: 97
+# ▃  | Report size: 504 bits
+# ▃ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃                 Total of 62 repeated usages, use --full to see all            
+# ------- Feature Report ------- 
+# ▘ Report ID: 98
+# ▘  | Report size: 504 bits
+# ▘ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘                 Total of 62 repeated usages, use --full to see all            
+# ------- Feature Report ------- 
+# ▓ Report ID: 101
+# ▓  | Report size: 40 bits
+# ▓ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▓ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▓ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▓ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▚ Report ID: 102
+# ▚  | Report size: 40 bits
+# ▚ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▞ Report ID: 103
+# ▞  | Report size: 40 bits
+# ▞ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▞ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▞ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▞ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▃ Report ID: 104
+# ▃  | Report size: 144 bits
+# ▃ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃                 Total of 17 repeated usages, use --full to see all            
+# ------- Feature Report ------- 
+# ▃ Report ID: 111
+# ▃  | Report size: 504 bits
+# ▃ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  24..=31  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  32..=39  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃                 Total of 62 repeated usages, use --full to see all            
+# ------- Feature Report ------- 
+# ▒ Report ID: 205
+# ▒  | Report size: 24 bits
+# ▒ Bits:   8..=15  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ▒ Bits:  16..=23  Usage: ff0d/0000: <unknown>                                   Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▃ Report ID: 209
+# ▃  | Report size: 2088 bits
+# ▃ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  24..=31  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  32..=39  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃                 Total of 260 repeated usages, use --full to see all           
+# ------- Feature Report ------- 
+# ▘ Report ID: 210
+# ▘  | Report size: 2088 bits
+# ▘ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  24..=31  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  32..=39  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘                 Total of 260 repeated usages, use --full to see all           
+# ------- Feature Report ------- 
+# ░ Report ID: 211
+# ░  | Report size: 40 bits
+# ░ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ░ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ░ Bits:  24..=31  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ░ Bits:  32..=39  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▒ Report ID: 212
+# ▒  | Report size: 40 bits
+# ▒ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▒ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▒ Bits:  24..=31  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▒ Bits:  32..=39  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▓ Report ID: 213
+# ▓  | Report size: 40 bits
+# ▓ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▓ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▓ Bits:  24..=31  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▓ Bits:  32..=39  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▚ Report ID: 214
+# ▚  | Report size: 40 bits
+# ▚ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  24..=31  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  32..=39  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▞ Report ID: 215
+# ▞  | Report size: 168 bits
+# ▞ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▞ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▞ Bits:  24..=31  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▞ Bits:  32..=39  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▞                 Total of 20 repeated usages, use --full to see all            
+# ------- Feature Report ------- 
+# ▃ Report ID: 216
+# ▃  | Report size: 104 bits
+# ▃ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  24..=31  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  32..=39  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃                 Total of 12 repeated usages, use --full to see all            
+# ------- Feature Report ------- 
+# ▘ Report ID: 217
+# ▘  | Report size: 10248 bits
+# ▘ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  24..=31  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  32..=39  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘                 Total of 1280 repeated usages, use --full to see all          
+# ------- Feature Report ------- 
+# ░ Report ID: 218
+# ░  | Report size: 4136 bits
+# ░ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ░ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ░ Bits:  24..=31  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ░ Bits:  32..=39  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ░                 Total of 516 repeated usages, use --full to see all           
+# ------- Feature Report ------- 
+# ▒ Report ID: 219
+# ▒  | Report size: 56 bits
+# ▒ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▒ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▒ Bits:  24..=31  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▒ Bits:  32..=39  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▒                 Total of 6 repeated usages, use --full to see all             
+# ------- Feature Report ------- 
+# ▓ Report ID: 220
+# ▓  | Report size: 24 bits
+# ▓ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▓ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▚ Report ID: 221
+# ▚  | Report size: 40 bits
+# ▚ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  24..=31  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  32..=39  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▞ Report ID: 222
+# ▞  | Report size: 40 bits
+# ▞ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▞ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▞ Bits:  24..=31  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▞ Bits:  32..=39  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▃ Report ID: 223
+# ▃  | Report size: 280 bits
+# ▃ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  24..=31  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃ Bits:  32..=39  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▃                 Total of 34 repeated usages, use --full to see all            
+# ------- Feature Report ------- 
+# ▘ Report ID: 224
+# ▘  | Report size: 16 bits
+# ▘ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ░ Report ID: 225
+# ░  | Report size: 24 bits
+# ░ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ░ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▒ Report ID: 226
+# ▒  | Report size: 24 bits
+# ▒ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▒ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▓ Report ID: 227
+# ▓  | Report size: 24 bits
+# ▓ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▓ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ------- Feature Report ------- 
+# ▚ Report ID: 228
+# ▚  | Report size: 4096 bits
+# ▚ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  24..=31  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚ Bits:  32..=39  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▚                 Total of 511 repeated usages, use --full to see all           
+# ------- Feature Report ------- 
+# ▘ Report ID: 203
+# ▘  | Report size: 256 bits
+# ▘ Bits:   8..=15  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  16..=23  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  24..=31  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘ Bits:  32..=39  Usage: ff0d/0001: Wacom / Wacom Digitizer                     Logical Range:     0..=255   Physical Range:     0..=0     
+# ▘                 Total of 31 repeated usages, use --full to see all            
+##############################################################################
+# Event nodes:
+# - /dev/input/event24: "Wacom Intuos Pro L Pad"
+# - /dev/input/event23: "Wacom Intuos Pro L Pen"
+##############################################################################
+# Recorded events below in format:
+# E: <seconds>.<microseconds> <length-in-bytes> [bytes ...]
+# 
+# Current time: 14:53:25
+# ▞  Report ID: 19 / 
+# ▞               Battery Strength:    86 |Wacom Battery Charging:     1 |<1 bits padding> |ff0d/0441:     1 |ff0d/0441:     5 |<1 bits padding> |<48 bits padding>
+E: 000000.000063 9 13 d6 52 18 f3 0d 00 00 00 
+# ▞  Report ID: 19 / 
+# ▞               Battery Strength:    86 |Wacom Battery Charging:     1 |<1 bits padding> |ff0d/0441:     1 |ff0d/0441:     5 |<1 bits padding> |<48 bits padding>
+E: 000001.006912 9 13 d6 52 18 f3 0d 00 00 00 
+# ▓  Report ID: 17 / 
+# ▓               Wacom ExpressKey00:     0 |ff0d/0911:     0 |ff0d/0912:     0 |ff0d/0913:     0 |ff0d/0914:     0 |ff0d/0915:     0 |ff0d/0916:     0 |ff0d/0917:     0 |<8 bits padding> |Wacom Button Center:     0 |Wacom Button Center:     0 |<6 bits padding> |Wacom TouchRing:     0 |<1 bits padding> |Wacom TouchRing:   127 |<1 bits padding> |<24 bits padding>
+E: 000001.179020 9 11 00 00 00 00 7f 00 00 00 
+# ▞  Report ID: 19 / 
+# ▞               Battery Strength:    86 |Wacom Battery Charging:     1 |<1 bits padding> |ff0d/0441:     1 |ff0d/0441:     5 |<1 bits padding> |<48 bits padding>
+E: 000002.013882 9 13 d6 52 18 f3 0d 00 00 00 
+# ▓  Report ID: 17 / 
+# ▓               Wacom ExpressKey00:     0 |ff0d/0911:     0 |ff0d/0912:     0 |ff0d/0913:     0 |ff0d/0914:     0 |ff0d/0915:     0 |ff0d/0916:     0 |ff0d/0917:     0 |<8 bits padding> |Wacom Button Center:     0 |Wacom Button Center:     0 |<6 bits padding> |Wacom TouchRing:     0 |<1 bits padding> |Wacom TouchRing:   127 |<1 bits padding> |<24 bits padding>
+E: 000002.341961 9 11 00 00 00 00 7f 00 00 00 
+# ▞  Report ID: 19 / 
+# ▞               Battery Strength:    86 |Wacom Battery Charging:     1 |<1 bits padding> |ff0d/0441:     1 |ff0d/0441:     5 |<1 bits padding> |<48 bits padding>
+E: 000003.022013 9 13 d6 52 18 f5 0d 00 00 00 
+# ▓  Report ID: 17 / 
+# ▓               Wacom ExpressKey00:     0 |ff0d/0911:     0 |ff0d/0912:     0 |ff0d/0913:     0 |ff0d/0914:     0 |ff0d/0915:     0 |ff0d/0916:     0 |ff0d/0917:     0 |<8 bits padding> |Wacom Button Center:     0 |Wacom Button Center:     0 |<6 bits padding> |Wacom TouchRing:     0 |<1 bits padding> |Wacom TouchRing:   127 |<1 bits padding> |<24 bits padding>
+E: 000003.414008 9 11 00 00 00 00 7f 00 00 00 
+# ▞  Report ID: 19 / 
+# ▞               Battery Strength:    86 |Wacom Battery Charging:     1 |<1 bits padding> |ff0d/0441:     1 |ff0d/0441:     5 |<1 bits padding> |<48 bits padding>
+E: 000004.029015 9 13 d6 52 18 f5 0d 00 00 00 
+# Current time: 14:53:30
+# ▞  Report ID: 19 / 
+# ▞               Battery Strength:    86 |Wacom Battery Charging:     1 |<1 bits padding> |ff0d/0441:     1 |ff0d/0441:     5 |<1 bits padding> |<48 bits padding>
+E: 000005.036019 9 13 d6 52 18 f5 0d 00 00 00 
